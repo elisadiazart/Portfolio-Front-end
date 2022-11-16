@@ -1,0 +1,32 @@
+$black--color: black;
+$white--color: white;
+
+
+
+/*.menu {
+    position: absolute;
+    transform: translateX(100vw);
+}*/
+
+
+.menu {
+    position: absolute;
+    z-index: 10000;
+    background-color: $black--color;
+    top: 0;
+    width: 100%;
+    height: 200vh;
+    padding-left: 100px;
+    padding-top: 150px;
+
+    &__link {
+        color: $white--color;
+        font-family: 'Montserrat', sans-serif;
+        font-weight: 400;
+        font-size: 16px;
+    }
+
+    &__item {
+        padding-bottom: 4rem;
+    }
+}
