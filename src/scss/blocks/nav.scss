@@ -12,7 +12,7 @@
         width: 87px;
         height: 40px;
         border-radius: 130px;
-        background-color: --black--color;
+        background-color: var(--black-color);
         margin-right: 20px;
         position: relative;
 
@@ -40,14 +40,14 @@
         margin-left: 15px;
         width: 30px;
         height: 30px;
+        
     }
 
     &__hamburguer-icon {
         margin: auto;
-
         width: 24px;
         height: 4px;
-        background-color: --black--color;
+        background-color: var(--black-color);
         position: relative;
     }
 
@@ -55,7 +55,7 @@
         content: '';
         width: 24px;
         height: 4px;
-        background-color: --black--color;
+        background-color: var(--black-color);
         position: absolute;
         top: -200%;
     }
@@ -64,7 +64,7 @@
         content: '';
         width: 24px;
         height: 4px;
-        background-color: --black--color;
+        background-color: var(--black-color);
         position: absolute;
         top: 200%;
     }
