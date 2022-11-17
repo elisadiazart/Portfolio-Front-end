@@ -38,8 +38,10 @@
         justify-content: center;
         align-items: center;
         margin-left: 15px;
-        width: 30px;
-        height: 30px;
+        width: 50px;
+        height: 100px;
+        position: relative;
+        z-index: 100000;
         
     }
 
@@ -48,7 +50,10 @@
         width: 24px;
         height: 4px;
         background-color: var(--black-color);
-        position: relative;
+        position: absolute;
+        transition-property: background-color;
+        transition-duration: 0.9s;
+        
     }
 
     &__hamburguer-icon::after {
@@ -57,7 +62,9 @@
         height: 4px;
         background-color: var(--black-color);
         position: absolute;
-        top: -200%;
+        transform: translateY(-200%) ;
+        transition-property: transform;
+        transition-duration: 0.3s;
     }
 
     &__hamburguer-icon::before {
@@ -66,6 +73,30 @@
         height: 4px;
         background-color: var(--black-color);
         position: absolute;
-        top: 200%;
+        transform: translateY(200%) ;
+        transition-property: transform;
+        transition-duration: 0.3s;
     }
+}
+
+.line--cross {
+    background-color: transparent;
+    transition-property: background-color;
+    transition-duration: 0.4s;
+
+}
+
+.line--cross::before {
+    background-color: var(--primary-color);
+    transform: rotate(45deg) ;
+    transition-property: transform;
+    transition-duration: 0.3s;
+}
+
+
+.line--cross::after {
+    background-color: var(--primary-color);
+    transform: rotate(-45deg);
+    transition-property: transform;
+    transition-duration: 0.3s;
 }

@@ -14,30 +14,30 @@
   <title>Document</title>
 </head>
 
-<body>
-  <header class="header">
+<body id="body">
+  <div id="cursor" class="cursor"></div>
+  <header class="header" id="header">
     <div class="header__container">
       <nav class="header__nav">
         <div class="nav__hamburguer-icon-container" id="hamburguer">
-          <div class="nav__hamburguer-icon" ></div>
+          <div class="nav__hamburguer-icon" id="line"></div>
         </div>
-        <div class="nav__night-mode-icon"></div>
+        <div class="nav__night-mode-icon" ></div>
         <ul class="menu" id="menu">
-          <img src="" alt="" class="menu__close" id="close">
           <li class="menu__item">
-            <a href="#" class="menu__link">Home</a>
+            <a href="#" class="menu__link link--1">Home</a>
           </li>
           <li class="menu__item">
-            <a href="#" class="menu__link">Front-End Projects</a>
+            <a href="#" class="menu__link link--2">Front-End Projects</a>
           </li>
           <li class="menu__item">
-            <a href="#" class="menu__link">Graphic and UI Design</a>
+            <a href="#" class="menu__link link--3">Graphic and UI Design</a>
           </li>
           <li class="menu__item">
-            <a href="#" class="menu__link">Illustration</a>
+            <a href="#" class="menu__link link--4">Illustration</a>
           </li>
           <li class="menu__item">
-            <a href="#" class="menu__link">About me</a>
+            <a href="#" class="menu__link link--5">About me</a>
           </li>
         </ul>
       </nav>
@@ -57,12 +57,12 @@
         <a href=""><img src="../dist/assets/images/github.svg" alt="" class="social-media__item"></a>
         <a href=""><img src="../dist/assets/images/linkedin.svg" alt="" class="social-media__item"></a>
       </div>
-      <img src="../dist/assets/images/scroll.svg" alt="" class=" ">
+      <img src="../dist/assets/images/scroll.svg" alt="" class="scroll-image ">
     </div>
   </header>
   <main class="main"></main>
   <footer class="footer"></footer>
-  <script src="../js/scripts.js"></script>
+  <script src="../dist/js/scripts.js"></script>
 </body>
 
 </html>
