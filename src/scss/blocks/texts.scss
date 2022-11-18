@@ -22,3 +22,29 @@
 .text--extra-bold {
     font-weight: 600;
 }
+
+.section {
+    &--title {
+        font-family: 'Archivo', sans-serif;
+        font-weight: 500;
+        font-size: 36px;
+    }
+}
+
+.normal__text {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 12px;
+}
+
+
+.front-end {
+    &__tittle {
+        margin-right: 30%;
+        margin-bottom: 1.2rem;
+    }
+
+    &__text {
+        margin: 0;
+        margin-top: .5rem;
+    }
+}

@@ -362,6 +362,7 @@ a {
 
 body {
   position: relative;
+  background-color: var(--background-color);
 }
 @media screen and (min-width: 1024px) {
   body {
@@ -376,6 +377,7 @@ body::after {
   position: absolute;
   top: 112px;
   z-index: 100000;
+  position: fixed;
 }
 body::before {
   content: "";
@@ -386,6 +388,16 @@ body::before {
   top: 0;
   left: 64px;
   z-index: 10000;
+}
+
+.body__container {
+  background-image: var(--degradados-background);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: top left;
+  background-attachment: fixed;
+  position: relative;
+  z-index: 10;
 }
 
 .body--menu::after {
@@ -408,6 +420,12 @@ body::before {
     mix-blend-mode: difference;
     z-index: 1000;
     pointer-events: none;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .cursor-visible {
+    cursor: default;
   }
 }
 
@@ -436,11 +454,30 @@ body::before {
   font-weight: 600;
 }
 
+.section--title {
+  font-family: "Archivo", sans-serif;
+  font-weight: 500;
+  font-size: 36px;
+}
+
+.normal__text {
+  font-family: "Montserrat", sans-serif;
+  font-size: 12px;
+}
+
+.front-end__tittle {
+  margin-right: 30%;
+  margin-bottom: 1.2rem;
+}
+.front-end__text {
+  margin: 0;
+  margin-top: 0.5rem;
+}
+
 .header {
   height: 100vh;
   padding-top: 2rem;
   position: relative;
-  background-color: var(--background-color);
   overflow: hidden;
 }
 .header__container {
@@ -448,10 +485,6 @@ body::before {
   top: 0;
   height: 100vh;
   width: 100vw;
-  background-image: url(../assets/images/degradados.svg);
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: top left;
 }
 .header__text {
   font-family: "Montserrat", sans-serif;
@@ -459,7 +492,7 @@ body::before {
   font-size: 16px;
 }
 .header__text-container {
-  margin-top: 120px;
+  margin-top: 200px;
   margin-left: 110px;
   margin-bottom: 3rem;
 }
@@ -472,6 +505,68 @@ body::before {
   position: absolute;
   bottom: 30px;
   left: 20px;
+  z-index: -1;
+}
+
+.front-end {
+  padding-top: 4rem;
+  padding-bottom: 2rem;
+  position: relative;
+  z-index: -1;
+}
+.front-end::before {
+  content: "";
+  display: block;
+  height: 1px;
+  width: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
+  background-color: var(--black-color);
+  z-index: 10000;
+}
+.front-end::after {
+  content: "";
+  display: block;
+  height: 100%;
+  width: 1px;
+  position: absolute;
+  right: 64px;
+  top: 0;
+  background-color: var(--black-color);
+  z-index: 10000;
+}
+.front-end__text-container {
+  padding-left: 110px;
+}
+
+.image-container {
+  margin-top: 2rem;
+  padding-left: 64px;
+  padding-right: 64px;
+  position: relative;
+}
+.image-container::before {
+  content: "";
+  display: block;
+  height: 1px;
+  width: calc(100% + 64px);
+  position: absolute;
+  left: -64px;
+  top: 0;
+  background-color: var(--black-color);
+  z-index: 10000;
+}
+.image-container::after {
+  content: "";
+  display: block;
+  height: 1px;
+  width: calc(100% + 64px);
+  position: absolute;
+  left: -64px;
+  bottom: 0;
+  background-color: var(--black-color);
+  z-index: 10000;
 }
 
 /* ESTILOS DEL FOOTER */
@@ -480,9 +575,25 @@ body::before {
   height: 50px;
   justify-content: space-between;
   align-items: center;
-  margin-top: 50px;
+  padding-top: 50px;
+  padding-bottom: 63px;
+  position: fixed;
+  width: 100%;
+  background-color: var(--background-color);
 }
 
+.nav__container {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 100%;
+  padding-top: 95px;
+  padding-bottom: 30px;
+  background-image: var(--degradados-nav);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
 .nav__night-mode-icon {
   width: 87px;
   height: 40px;
@@ -570,6 +681,10 @@ body::before {
   width: 50px;
   padding-bottom: 2rem;
 }
+.social-media__link {
+  display: flex;
+  width: 50px;
+}
 
 .menu {
   position: absolute;
@@ -595,7 +710,7 @@ body::before {
   background-color: var(--black-color);
   top: 0;
   width: 100%;
-  height: 200vh;
+  height: 100vh;
   padding-left: 120px;
   padding-top: 210px;
   opacity: 1;
@@ -681,13 +796,15 @@ body::before {
 }
 
 :root {
-  --x-cord:0;
-  --y-cord:0;
+  --x-cord: 0;
+  --y-cord: 0;
   --cursor-color: #EAE1F4;
   --black-color: black;
   --white-color: white;
   --background-color: #EAE1F4;
   --primary-color: #E8D3FF;
+  --degradados-background: url(../assets/images/degradados.svg);
+  --degradados-nav: url(../assets/images/nav-background.svg);
   /* Variables CSS */
 }
 

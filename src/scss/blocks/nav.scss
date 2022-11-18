@@ -3,11 +3,29 @@
     height: 50px;
     justify-content: space-between;
     align-items: center;
-    margin-top: 50px;
-
+    padding-top: 50px;
+    padding-bottom: 63px;
+    position: fixed;
+    width: 100%;
+    background-color: var(--background-color);
 }
 
 .nav {
+    &__container {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        height: 100%;
+        padding-top: 95px;
+        padding-bottom: 30px;
+        background-image: var(--degradados-nav);
+        background-repeat: no-repeat;
+        background-size: cover;
+
+    }
+
+
     &__night-mode-icon {
         width: 87px;
         height: 40px;
@@ -42,7 +60,7 @@
         height: 100px;
         position: relative;
         z-index: 100000;
-        
+
     }
 
     &__hamburguer-icon {
@@ -53,7 +71,7 @@
         position: absolute;
         transition-property: background-color;
         transition-duration: 0.9s;
-        
+
     }
 
     &__hamburguer-icon::after {
@@ -62,7 +80,7 @@
         height: 4px;
         background-color: var(--black-color);
         position: absolute;
-        transform: translateY(-200%) ;
+        transform: translateY(-200%);
         transition-property: transform;
         transition-duration: 0.3s;
     }
@@ -73,7 +91,7 @@
         height: 4px;
         background-color: var(--black-color);
         position: absolute;
-        transform: translateY(200%) ;
+        transform: translateY(200%);
         transition-property: transform;
         transition-duration: 0.3s;
     }
@@ -88,7 +106,7 @@
 
 .line--cross::before {
     background-color: var(--primary-color);
-    transform: rotate(45deg) ;
+    transform: rotate(45deg);
     transition-property: transform;
     transition-duration: 0.3s;
 }

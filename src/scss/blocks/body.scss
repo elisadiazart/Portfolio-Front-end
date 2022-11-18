@@ -2,9 +2,12 @@
 
 body {
     position: relative;
-    @include responsive(laptop){
-        cursor:none;
+    background-color: var(--background-color);
+
+    @include responsive(laptop) {
+        cursor: none;
     }
+
 
     &::after {
         content: '';
@@ -14,7 +17,7 @@ body {
         position: absolute;
         top: 112px;
         z-index: 100000;
-        
+        position: fixed;
     }
 
     &::before {
@@ -26,13 +29,27 @@ body {
         top: 0;
         left: 64px;
         z-index: 10000;
+
     }
 }
 
-.body--menu{
+
+.body {
+    &__container {
+        background-image: var(--degradados-background);
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: top left;
+        background-attachment: fixed;
+        position: relative;
+        z-index: 10;
+    }
+}
+
+.body--menu {
     &::after {
         background-color: var(--white-color);
-        
+
     }
 
     &::before {
@@ -40,13 +57,13 @@ body {
     }
 }
 
-.cursor{
-    @include responsive(laptop){
-        position:fixed;
-        top:var(--y-cord);
-        left:var(--x-cord);
-        width:70px;
-        height:70px;
+.cursor {
+    @include responsive(laptop) {
+        position: fixed;
+        top: var(--y-cord);
+        left: var(--x-cord);
+        width: 70px;
+        height: 70px;
         background-color: var(--cursor-color);
         border-radius: 50%;
         transform: translate(-50%, -50%);
@@ -54,5 +71,11 @@ body {
         z-index: 1000;
         pointer-events: none;
     }
-    
-  }
+
+}
+
+.cursor-visible {
+    @include responsive(laptop) {
+        cursor: default;
+    }
+}

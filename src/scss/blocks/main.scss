@@ -1,1 +1,65 @@
-/* ESTILOS DEL MAIN */
+.front-end {
+    padding-top: 4rem;
+    padding-bottom: 2rem;
+    position: relative;
+    z-index: -1;
+
+    &::before {
+        content: '';
+        display: block;
+        height: 1px;
+        width: 100%;
+        position: absolute;
+        left: 0;
+        top: 0;
+        background-color: var(--black-color);
+        z-index: 10000;
+    }
+
+    &::after {
+        content: '';
+        display: block;
+        height: 100%;
+        width: 1px;
+        position: absolute;
+        right: 64px;
+        top: 0;
+        background-color: var(--black-color);
+        z-index: 10000;
+    }
+
+    &__text-container {
+        padding-left: 110px;
+    }
+}
+
+.image-container {
+    margin-top: 2rem;
+    padding-left: 64px;
+    padding-right: 64px;
+    position: relative;
+
+    &::before {
+        content: '';
+        display: block;
+        height: 1px;
+        width: calc(100% + 64px);
+        position: absolute;
+        left: -64px;
+        top: 0;
+        background-color: var(--black-color);
+        z-index: 10000;
+    }
+
+    &::after {
+        content: '';
+        display: block;
+        height: 1px;
+        width: calc(100% + 64px);
+        position: absolute;
+        left: -64px;
+        bottom: 0;
+        background-color: var(--black-color);
+        z-index: 10000;
+    }
+}

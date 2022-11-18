@@ -1,4 +1,11 @@
-.social-media__item {
-    width: 50px;
-    padding-bottom: 2rem;
+.social-media {
+    &__item {
+        width: 50px;
+        padding-bottom: 2rem;
+    }
+
+    &__link {
+        display: flex;
+        width: 50px;
+    }
 }

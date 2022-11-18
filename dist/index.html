@@ -15,53 +15,75 @@
 </head>
 
 <body id="body">
-  <div id="cursor" class="cursor"></div>
-  <header class="header" id="header">
-    <div class="header__container">
-      <nav class="header__nav">
-        <div class="nav__hamburguer-icon-container" id="hamburguer">
-          <div class="nav__hamburguer-icon" id="line"></div>
+  <div class="body__container" id="body-container">
+    <div id="cursor" class="cursor"></div>
+    <header class="header" id="header">
+      <div class="header__container">
+        <nav class="header__nav">
+          <div class="nav__container">
+            <div class="nav__hamburguer-icon-container" id="hamburguer">
+              <div class="nav__hamburguer-icon" id="line"></div>
+            </div>
+            <div class="nav__night-mode-icon"></div>
+            <ul class="menu" id="menu">
+              <li class="menu__item">
+                <a href="#" class="menu__link link--1">Home</a>
+              </li>
+              <li class="menu__item">
+                <a href="#" class="menu__link link--2">Front-End Projects</a>
+              </li>
+              <li class="menu__item">
+                <a href="#" class="menu__link link--3">Graphic and UI Design</a>
+              </li>
+              <li class="menu__item">
+                <a href="#" class="menu__link link--4">Illustration</a>
+              </li>
+              <li class="menu__item">
+                <a href="#" class="menu__link link--5">About me</a>
+              </li>
+            </ul>
+          </div>
+        </nav>
+        <div class="header__text-container">
+          <h1 class="header_text very-big-text">Elisa Diaz <span class="header__text">{</span></h1>
+          <p class="text text--big"><span class="text text--extra-bold">Front-end</span> developer;</p>
+          <p class="text text--big"> <span class="text text--extra-bold">Graphic</span> and <span
+              class="text text--extra-bold">UI </span>designer;</p>
+          <p class="text text--big"></p><span class="text text--extra-bold">Illustrator</span>
+          ;</p>
+          <p class="text text--big">
+            }
+          </p>
         </div>
-        <div class="nav__night-mode-icon" ></div>
-        <ul class="menu" id="menu">
-          <li class="menu__item">
-            <a href="#" class="menu__link link--1">Home</a>
-          </li>
-          <li class="menu__item">
-            <a href="#" class="menu__link link--2">Front-End Projects</a>
-          </li>
-          <li class="menu__item">
-            <a href="#" class="menu__link link--3">Graphic and UI Design</a>
-          </li>
-          <li class="menu__item">
-            <a href="#" class="menu__link link--4">Illustration</a>
-          </li>
-          <li class="menu__item">
-            <a href="#" class="menu__link link--5">About me</a>
-          </li>
-        </ul>
-      </nav>
-      <div class="header__text-container">
-        <h1 class="header_text very-big-text">Elisa Diaz <span class="header__text">{</span></h1>
-        <p class="text text--big"><span class="text text--extra-bold">Front-end</span> developer;</p>
-        <p class="text text--big"> <span class="text text--extra-bold">Graphic</span> and <span
-            class="text text--extra-bold">UI </span>designer;</p>
-        <p class="text text--big"></p><span class="text text--extra-bold">Illustrator</span>
-        ;</p>
-        <p class="text text--big">
-          }
-        </p>
+        <div class="header__social-media">
+          <a class="social-media__link" href=""><img src="../dist/assets/images/behance.svg" alt=""
+              class="social-media__item"></a>
+          <a class="social-media__link" href=""><img src="../dist/assets/images/github.svg" alt=""
+              class="social-media__item"></a>
+          <a class="social-media__link" href=""><img src="../dist/assets/images/linkedin.svg" alt=""
+              class="social-media__item"></a>
+        </div>
+        <img src="../dist/assets/images/scroll.svg" alt="" class="scroll-image ">
       </div>
-      <div class="header__social-media">
-        <a href=""><img src="../dist/assets/images/behance.svg" alt="" class="social-media__item"></a>
-        <a href=""><img src="../dist/assets/images/github.svg" alt="" class="social-media__item"></a>
-        <a href=""><img src="../dist/assets/images/linkedin.svg" alt="" class="social-media__item"></a>
-      </div>
-      <img src="../dist/assets/images/scroll.svg" alt="" class="scroll-image ">
-    </div>
-  </header>
-  <main class="main"></main>
-  <footer class="footer"></footer>
+    </header>
+    <main class="main">
+      <section class="front-end" data-background="background-color">
+        <div class="front-end__text-container">
+          <h2 class="front-end__tittle section--title">Front-End Projects <span
+              class="front-end__text normal__text">{</span>
+          </h2>
+          <p class="front-end__text normal__text">HTML;</p>
+          <p class="front-end__text normal__text">CSS, ASS;</p>
+          <p class="front-end__text normal__text">JavaScript;</p>
+          <p class="front-end__text normal__text">}</p>
+        </div>
+        <div class="image-container">
+          <img class="image" src="../dist/assets/images/prueba.jpg" alt="">
+        </div>
+      </section>
+    </main>
+    <footer class="footer"></footer>
+  </div>
   <script src="../dist/js/scripts.js"></script>
 </body>
 
