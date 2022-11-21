@@ -459,6 +459,13 @@ body::before {
   font-weight: 500;
   font-size: 36px;
 }
+.section__link-text {
+  text-transform: uppercase;
+  font-family: "Montserrat", sans-serif;
+  font-size: 12px;
+  font-weight: 800;
+  padding-left: 0.6rem;
+}
 
 .normal__text {
   font-family: "Montserrat", sans-serif;
@@ -466,7 +473,7 @@ body::before {
 }
 
 .front-end__tittle {
-  margin-right: 30%;
+  margin-right: 20%;
   margin-bottom: 1.2rem;
 }
 .front-end__text {
@@ -474,8 +481,14 @@ body::before {
   margin-top: 0.5rem;
 }
 
+.project-title {
+  font-family: "Archivo", sans-serif;
+  font-weight: 500;
+  font-size: 30px;
+}
+
 .header {
-  height: 100vh;
+  height: 105vh;
   padding-top: 2rem;
   position: relative;
   overflow: hidden;
@@ -509,7 +522,6 @@ body::before {
 }
 
 .front-end {
-  padding-top: 4rem;
   padding-bottom: 2rem;
   position: relative;
   z-index: -1;
@@ -537,11 +549,14 @@ body::before {
   z-index: 10000;
 }
 .front-end__text-container {
+  padding-top: 4rem;
+  padding-right: 110px;
   padding-left: 110px;
+  padding-bottom: 3rem;
 }
 
 .image-container {
-  margin-top: 2rem;
+  margin: 0;
   padding-left: 64px;
   padding-right: 64px;
   position: relative;
@@ -567,6 +582,43 @@ body::before {
   bottom: 0;
   background-color: var(--black-color);
   z-index: 10000;
+}
+
+.continuation::before {
+  display: none;
+}
+
+.section--end::after {
+  content: "";
+  display: block;
+  height: 1px;
+  width: calc(100% + 64px);
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  background-color: var(--black-color);
+  z-index: 10000;
+}
+
+.section__icon-link {
+  display: flex;
+  align-items: center;
+  padding-top: 1rem;
+}
+.section__icon {
+  width: 35px;
+}
+
+.graphic-UI::after {
+  content: "";
+  display: block;
+  height: 100%;
+  width: 1px;
+  position: absolute;
+  right: 64px;
+  top: 0;
+  background-color: var(--black-color);
+  z-index: 0;
 }
 
 /* ESTILOS DEL FOOTER */

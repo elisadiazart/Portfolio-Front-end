@@ -29,6 +29,13 @@
         font-weight: 500;
         font-size: 36px;
     }
+    &__link-text{
+        text-transform: uppercase;
+        font-family: 'Montserrat', sans-serif;
+        font-size: 12px;
+        font-weight: 800;
+        padding-left: .6rem;
+    }
 }
 
 .normal__text {
@@ -39,7 +46,7 @@
 
 .front-end {
     &__tittle {
-        margin-right: 30%;
+        margin-right: 20%;
         margin-bottom: 1.2rem;
     }
 
@@ -47,4 +54,10 @@
         margin: 0;
         margin-top: .5rem;
     }
+}
+
+.project-title{
+    font-family: 'Archivo', sans-serif;
+    font-weight: 500;
+    font-size: 30px;
 }
