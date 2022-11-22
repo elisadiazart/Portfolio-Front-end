@@ -457,7 +457,7 @@ body::before {
 .section--title {
   font-family: "Archivo", sans-serif;
   font-weight: 500;
-  font-size: 36px;
+  font-size: 33px;
 }
 .section__link-text {
   text-transform: uppercase;
@@ -471,21 +471,19 @@ body::before {
   font-family: "Montserrat", sans-serif;
   font-size: 12px;
   line-height: 1.3rem;
+  margin: 0;
+  margin-bottom: 0.3rem;
 }
 
 .front-end__tittle {
   margin-right: 20%;
   margin-bottom: 1.2rem;
 }
-.front-end__text {
-  margin: 0;
-  margin-top: 0.5rem;
-}
 
 .project-title {
   font-family: "Archivo", sans-serif;
   font-weight: 500;
-  font-size: 30px;
+  font-size: 29px;
 }
 
 .header {
@@ -606,6 +604,9 @@ body::before {
 .graphic-UI__UI {
   margin-bottom: 2rem;
 }
+.graphic-UI__graphic {
+  padding-bottom: 2.5rem;
+}
 .graphic-UI::after {
   content: "";
   display: block;
@@ -644,8 +645,10 @@ body::before {
   height: 1px;
   width: calc(100% + 64px + 64px);
   left: -64px;
+  bottom: 0;
   position: absolute;
   background-color: var(--black-color);
+  z-index: 10000;
 }
 
 .link {
@@ -681,6 +684,37 @@ body::before {
 
 .graphic-design--icons {
   padding: 3rem;
+}
+
+.under--line-short {
+  position: relative;
+}
+.under--line-short::after {
+  content: "";
+  display: block;
+  height: 1px;
+  width: 100%;
+  left: -64px;
+  bottom: 0;
+  position: absolute;
+  background-color: var(--black-color);
+  z-index: 10000;
+  margin-left: 64px;
+}
+
+.illustration__container {
+  margin-bottom: 2rem;
+}
+
+.About-me__container::before {
+  display: none;
+}
+.About-me__container::after {
+  display: none;
+}
+
+.About-me__text-container {
+  padding-bottom: 2rem;
 }
 
 /* ESTILOS DEL FOOTER */
