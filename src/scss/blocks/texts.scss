@@ -29,11 +29,12 @@
         font-weight: 500;
         font-size: 36px;
     }
-    &__link-text{
+
+    &__link-text {
         text-transform: uppercase;
         font-family: 'Montserrat', sans-serif;
         font-size: 12px;
-        font-weight: 800;
+        font-weight: 600;
         padding-left: .6rem;
     }
 }
@@ -41,6 +42,7 @@
 .normal__text {
     font-family: 'Montserrat', sans-serif;
     font-size: 12px;
+    line-height: 1.3rem;
 }
 
 
@@ -56,7 +58,7 @@
     }
 }
 
-.project-title{
+.project-title {
     font-family: 'Archivo', sans-serif;
     font-weight: 500;
     font-size: 30px;

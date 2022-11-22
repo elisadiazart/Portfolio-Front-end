@@ -29,19 +29,26 @@ headerElement.addEventListener("mouseenter", () => {
 
 const options = {
   root: null,
-  rootMargin: '200px',
-  threshold: 1
+  rootMargin: '0px',
+  threshold: 0.3
 }
 
 const callback = (entries) => {
   entries.forEach(entry => {
     if (entry.isIntersecting) {
+      console.log(entry.target)
 
       if (entry.target.dataset.background === 'background-color') {
         rootStyles.setProperty('--background-color', '#E1EBF4')
         rootStyles.setProperty('--degradados-background', 'url(../assets/images/degradados-blue.svg)')
         rootStyles.setProperty('--degradados-nav', 'url(../assets/images/nav-background-blue.svg)')
         rootStyles.setProperty('--cursor-color', '#E1EBF4')
+      }
+      if (entry.target.dataset.background === 'background-color-green') {
+        rootStyles.setProperty('--background-color', '#E1F4ED')
+        rootStyles.setProperty('--degradados-background', 'url(../assets/images/degradados-green.svg)')
+        rootStyles.setProperty('--degradados-nav', 'url(../assets/images/nav-background-green.svg)')
+        rootStyles.setProperty('--cursor-color', '#E1F4ED')
       }
 
 
@@ -51,10 +58,16 @@ const callback = (entries) => {
       rootStyles.setProperty('--degradados-background', 'url(../assets/images/degradados.svg)')
       rootStyles.setProperty('--degradados-nav', 'url(../assets/images/nav-background.svg)')
       rootStyles.setProperty('--cursor-color', '#EAE1F4')
+
     }
+
   })
 }
 
+
+
 const observer = new IntersectionObserver(callback, options)
 observer.observe(document.querySelector('.front-end'))
+observer.observe(document.querySelector('.graphic-UI'))
 
+console.log('hola')

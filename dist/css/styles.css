@@ -463,13 +463,14 @@ body::before {
   text-transform: uppercase;
   font-family: "Montserrat", sans-serif;
   font-size: 12px;
-  font-weight: 800;
+  font-weight: 600;
   padding-left: 0.6rem;
 }
 
 .normal__text {
   font-family: "Montserrat", sans-serif;
   font-size: 12px;
+  line-height: 1.3rem;
 }
 
 .front-end__tittle {
@@ -537,31 +538,21 @@ body::before {
   background-color: var(--black-color);
   z-index: 10000;
 }
-.front-end::after {
-  content: "";
-  display: block;
-  height: 100%;
-  width: 1px;
-  position: absolute;
-  right: 64px;
-  top: 0;
-  background-color: var(--black-color);
-  z-index: 10000;
-}
-.front-end__text-container {
+
+.text--container {
   padding-top: 4rem;
   padding-right: 110px;
   padding-left: 110px;
-  padding-bottom: 3rem;
+  padding-bottom: 4rem;
 }
 
-.image-container {
+.image--container {
   margin: 0;
   padding-left: 64px;
   padding-right: 64px;
   position: relative;
 }
-.image-container::before {
+.image--container::before {
   content: "";
   display: block;
   height: 1px;
@@ -572,7 +563,7 @@ body::before {
   background-color: var(--black-color);
   z-index: 10000;
 }
-.image-container::after {
+.image--container::after {
   content: "";
   display: block;
   height: 1px;
@@ -588,6 +579,9 @@ body::before {
   display: none;
 }
 
+.section--end {
+  position: relative;
+}
 .section--end::after {
   content: "";
   display: block;
@@ -609,6 +603,9 @@ body::before {
   width: 35px;
 }
 
+.graphic-UI__UI {
+  margin-bottom: 2rem;
+}
 .graphic-UI::after {
   content: "";
   display: block;
@@ -618,7 +615,72 @@ body::before {
   right: 64px;
   top: 0;
   background-color: var(--black-color);
+  z-index: 10;
+}
+.graphic-UI__container {
+  position: relative;
   z-index: 0;
+}
+.graphic-UI__container::after {
+  display: none;
+}
+.graphic-UI__image {
+  margin: 0;
+  width: 100%;
+  object-fit: cover;
+}
+
+.image--container-double {
+  display: flex;
+  max-width: 50%;
+}
+
+.under--line {
+  position: relative;
+}
+.under--line::after {
+  content: "";
+  display: block;
+  height: 1px;
+  width: calc(100% + 64px + 64px);
+  left: -64px;
+  position: absolute;
+  background-color: var(--black-color);
+}
+
+.link {
+  display: block;
+  padding-top: 1rem;
+}
+.link__text {
+  text-transform: uppercase;
+  font-family: "Montserrat", sans-serif;
+  font-size: 12px;
+  font-weight: 600;
+  margin: 0;
+}
+.link__item {
+  margin: 0;
+  text-transform: uppercase;
+  font-family: "Montserrat", sans-serif;
+  font-size: 12px;
+  font-weight: 600;
+  text-decoration: underline;
+}
+.link__container {
+  display: flex;
+}
+.link__separation {
+  text-transform: uppercase;
+  font-family: "Montserrat", sans-serif;
+  font-size: 12px;
+  font-weight: 600;
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
+}
+
+.graphic-design--icons {
+  padding: 3rem;
 }
 
 /* ESTILOS DEL FOOTER */
@@ -632,6 +694,7 @@ body::before {
   position: fixed;
   width: 100%;
   background-color: var(--background-color);
+  z-index: 100000;
 }
 
 .nav__container {
@@ -645,6 +708,8 @@ body::before {
   background-image: var(--degradados-nav);
   background-repeat: no-repeat;
   background-size: cover;
+  position: relative;
+  z-index: 100000;
 }
 .nav__night-mode-icon {
   width: 87px;
@@ -667,7 +732,7 @@ body::before {
   transform: translate(-50%, -50%);
   top: 50%;
   left: 20px;
-  z-index: 1000;
+  z-index: 100000;
 }
 .nav__hamburguer-icon-container {
   display: flex;
