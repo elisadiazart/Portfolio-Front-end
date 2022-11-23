@@ -8,7 +8,7 @@
     position: fixed;
     width: 100%;
     background-color: var(--background-color);
-    z-index: 100000;
+    z-index: 1000;
 }
 
 .nav {
@@ -24,7 +24,7 @@
         background-repeat: no-repeat;
         background-size: cover;
         position: relative;
-        z-index: 100000;
+        z-index: 1000;
 
     }
 
@@ -53,6 +53,9 @@
             z-index: 100000;
         }
     }
+
+
+
 
     &__hamburguer-icon-container {
         display: flex;
@@ -98,6 +101,10 @@
         transition-property: transform;
         transition-duration: 0.3s;
     }
+}
+
+.night-mode-icon--desactive {
+    display: none;
 }
 
 .line--cross {

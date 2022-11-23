@@ -7,6 +7,7 @@ const cursor = document.getElementById("cursor");
 const headerElement = document.getElementById("header");
 const rootStyles = document.documentElement.style;
 const bodyContainer = document.getElementById('body-container')
+const NightModeElement = document.getElementById('night-mode')
 
 
 hamburguerElement.addEventListener('click', () => {
@@ -14,6 +15,8 @@ hamburguerElement.addEventListener('click', () => {
   lineElement.classList.toggle('line--cross');
   bodyElement.classList.toggle('body--menu')
   bodyElement.classList.toggle('cursor-visible')
+  bodyElement.classList.toggle('no-scroll')
+  NightModeElement.classList.toggle('night-mode-icon--desactive')
 
 });
 
@@ -36,31 +39,30 @@ const options = {
 const callback = (entries) => {
   entries.forEach(entry => {
     if (entry.isIntersecting) {
-      console.log(entry.target)
+      console.log(entry.target.dataset)
 
-      if (entry.target.dataset.background === 'background-color') {
-        rootStyles.setProperty('--background-color', '#E1EBF4')
-        rootStyles.setProperty('--degradados-background', 'url(../assets/images/degradados-blue.svg)')
-        rootStyles.setProperty('--degradados-nav', 'url(../assets/images/nav-background-blue.svg)')
-        rootStyles.setProperty('--cursor-color', '#E1EBF4')
-      }
-      if (entry.target.dataset.background === 'background-color-green') {
-        rootStyles.setProperty('--background-color', '#E1F4ED')
-        rootStyles.setProperty('--degradados-background', 'url(../assets/images/degradados-green.svg)')
-        rootStyles.setProperty('--degradados-nav', 'url(../assets/images/nav-background-green.svg)')
-        rootStyles.setProperty('--cursor-color', '#E1F4ED')
+      if (entry.target.dataset.background) {
+        if (entry.target.dataset.background === 'blue') {
+          rootStyles.setProperty('--background-color', '#E1EBF4')
+          rootStyles.setProperty('--degradados-background', 'url(../assets/images/degradados-blue.svg)')
+          rootStyles.setProperty('--degradados-nav', 'url(../assets/images/nav-background-blue.svg)')
+          rootStyles.setProperty('--cursor-color', '#E1EBF4')
+        } else if (entry.target.dataset.background === 'green') {
+          rootStyles.setProperty('--background-color', '#E1F4ED')
+          rootStyles.setProperty('--degradados-background', 'url(../assets/images/degradados-green.svg)')
+          rootStyles.setProperty('--degradados-nav', 'url(../assets/images/nav-background-green.svg)')
+          rootStyles.setProperty('--cursor-color', '#E1F4ED')
+        }
+      } else {
+        rootStyles.setProperty('--background-color', '#EAE1F4')
+        rootStyles.setProperty('--degradados-background', 'url(../assets/images/degradados.svg)')
+        rootStyles.setProperty('--degradados-nav', 'url(../assets/images/nav-background.svg)')
+        rootStyles.setProperty('--cursor-color', '#EAE1F4')
+
       }
 
 
     }
-    else {
-      rootStyles.setProperty('--background-color', '#EAE1F4')
-      rootStyles.setProperty('--degradados-background', 'url(../assets/images/degradados.svg)')
-      rootStyles.setProperty('--degradados-nav', 'url(../assets/images/nav-background.svg)')
-      rootStyles.setProperty('--cursor-color', '#EAE1F4')
-
-    }
-
   })
 }
 

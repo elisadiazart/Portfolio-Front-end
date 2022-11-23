@@ -24,16 +24,17 @@
             <div class="nav__hamburguer-icon-container" id="hamburguer">
               <div class="nav__hamburguer-icon" id="line"></div>
             </div>
-            <div class="nav__night-mode-icon"></div>
+            <div class="nav__night-mode-icon" id="night-mode"></div>
             <ul class="menu" id="menu">
               <li class="menu__item">
-                <a href="#" class="menu__link link--1">Home</a>
+                <a href="#" class="menu__link link--1 link--active">Home</a>
               </li>
               <li class="menu__item">
-                <a href="#" class="menu__link link--2">Front-End Projects</a>
+                <a href="#" class="menu__link link--2">Front- <span class="display-block"> End </span> <span
+                    class="display-block">Projects</span></a>
               </li>
               <li class="menu__item">
-                <a href="#" class="menu__link link--3">Graphic and UI Design</a>
+                <a href="#" class="menu__link link--3">Graphic <span class="display-block"> and UI</span> Design</a>
               </li>
               <li class="menu__item">
                 <a href="#" class="menu__link link--4">Illustration</a>
@@ -67,7 +68,7 @@
       </div>
     </header>
     <main class="main">
-      <section class="front-end" data-background="background-color">
+      <section class="front-end" data-background="blue">
         <div class="front-end__text-container text--container">
           <h2 class="front-end__tittle section--title">Front-End Projects <span
               class="front-end__text normal__text">{</span>
@@ -96,7 +97,7 @@
           </a>
         </div>
       </section>
-      <section class="graphic-UI" data-background="background-color-green">
+      <section class="graphic-UI" data-background="green">
         <div class="graphic-UI__text-container text--container">
           <h2 class="graphic-UI__tittle section--title">Graphic and IU design <span
               class="graphic-UI__text normal__text">{</span>
@@ -141,14 +142,14 @@
         <article class="graphic-UI__graphic">
           <div class="graphic-UI__container image--container">
             <div class="under--line-short">
-            <img src="../dist/assets/images/Graphic design 01.png" alt="" class="graphic-UI__image">
-          </div>
+              <img src="../dist/assets/images/Graphic design 01.png" alt="" class="graphic-UI__image">
+            </div>
             <div class="under--line">
               <img src="../dist/assets/images/Graphic design 02.png" alt="" class="graphic-UI__image">
             </div>
             <div class="under--line-short">
-            <img src="../dist/assets/images/Graphic design 03.png" alt="" class="graphic-UI__image">
-          </div>
+              <img src="../dist/assets/images/Graphic design 03.png" alt="" class="graphic-UI__image">
+            </div>
             <div class="under--line">
               <img src="../dist/assets/images/Graphic design 04.png" alt="" class="graphic-UI__image">
             </div>
@@ -170,46 +171,42 @@
         </div>
         <article class="illustration__graphic">
           <div class="illustration__container image--container">
-            <div class="under--line-short"> 
+            <div class="under--line-short">
               <img src="../dist/assets/images/Ilustracion 01.png" alt="" class="illustration__image">
             </div>
             <div class="under--line-short">
               <img src="../dist/assets/images/Ilustracion 02.png" alt="" class="illustration__image">
             </div>
             <div class="under--line-short">
-            <img src="../dist/assets/images/Ilustracion 03.png" alt="" class="illustration__image">
-          </div>
+              <img src="../dist/assets/images/Ilustracion 03.png" alt="" class="illustration__image">
+            </div>
             <div class="under--line-short">
               <img src="../dist/assets/images/Ilustracion 04.png" alt="" class="illustration__image">
             </div>
             <div class="under--line-short">
-              <img src="../dist/assets/images/Ilustracion 05.png" alt=""
-                class="illustration__image">
+              <img src="../dist/assets/images/Ilustracion 05.png" alt="" class="illustration__image">
             </div>
             <div class="under--line-short">
-              <img src="../dist/assets/images/Ilustracion 06.png" alt=""
-                class="illustration__image">
+              <img src="../dist/assets/images/Ilustracion 06.png" alt="" class="illustration__image">
             </div>
             <div>
-              <img src="../dist/assets/images/Ilustracion 07.png" alt=""
-                class="illustration__image">
+              <img src="../dist/assets/images/Ilustracion 07.png" alt="" class="illustration__image">
             </div>
           </div>
         </article>
       </section>
       <section class="About-me">
         <div class="About-me__text-container text--container under--line">
-          <h2 class="About-me__tittle section--title">About me <span
-              class="About-me__text normal__text">{</span>
+          <h2 class="About-me__tittle section--title">About me <span class="About-me__text normal__text">{</span>
           </h2>
-          <p class="About-me__text normal__text">Illustrator, Photoshop &  Clip Studio;</p>
+          <p class="About-me__text normal__text">Illustrator, Photoshop & Clip Studio;</p>
           <p class="About-me__text normal__text">Figma & Principle;</p>
           <p class="About-me__text normal__text">HTML, CSS, SASS & Javascript</p>
           <p class="About-me__text normal__text">}</p>
         </div>
         <article class="About-me__graphic">
           <div class="About-me__container image--container ">
-            <div class="under--line-short"> 
+            <div class="under--line-short">
               <img src="../dist/assets/images/profile.png" alt="" class="About-me__image">
             </div>
           </div>
@@ -217,13 +214,14 @@
         <div class="graphic-UI__text-container text--container section--end">
           <h3 class="project-title">Get to know me <span class="normal__text">{</span></h3>
           <p class="normal__text">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque sit amet convallis ipsum. 
-            Sed efficitur ante eget eros maximus, fermentum ullamcorper nunc facilisis. Nunc finibus pretium purus dapibus porttitor.</p>
-          </div>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque sit amet convallis ipsum.
+            Sed efficitur ante eget eros maximus, fermentum ullamcorper nunc facilisis. Nunc finibus pretium purus
+            dapibus porttitor.</p>
         </div>
-      </section>
-    </main>
-    <footer class="footer"></footer>
+  </div>
+  </section>
+  </main>
+  <footer class="footer"></footer>
   </div>
   <script src="js/scripts.js"></script>
 

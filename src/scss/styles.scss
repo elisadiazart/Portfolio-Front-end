@@ -1,5 +1,6 @@
 @use 'base/normalize.scss';
 @use 'base/initial-reset.scss';
+@use 'config/variables.scss';
 @use 'blocks/body.scss';
 @use 'blocks/titles.scss';
 @use 'blocks/texts.scss';
@@ -11,4 +12,4 @@
 @use 'blocks/social-media.scss';
 @use 'blocks/icons.scss';
 @use 'blocks/menu.scss';
-@use 'config/variables.scss'
+@use 'helpers/helpers.scss';

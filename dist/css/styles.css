@@ -360,6 +360,20 @@ a {
   color: inherit;
 }
 
+:root {
+  --x-cord: 0;
+  --y-cord: 0;
+  --cursor-color: #EAE1F4;
+  --black-color: black;
+  --white-color: white;
+  --background-color: #EAE1F4;
+  --primary-color: #E8D3FF;
+  --degradados-background: url(../assets/images/degradados.svg);
+  --degradados-nav: url(../assets/images/nav-background.svg);
+  /* Variables CSS */
+}
+
+/* Variables SASS */
 body {
   position: relative;
   background-color: var(--background-color);
@@ -372,7 +386,7 @@ body {
 body::after {
   content: "";
   height: 1px;
-  width: 100%;
+  width: 100vw;
   background-color: var(--black-color);
   position: absolute;
   top: 112px;
@@ -643,7 +657,7 @@ body::before {
   content: "";
   display: block;
   height: 1px;
-  width: calc(100% + 64px + 64px);
+  width: calc(100% + 64px);
   left: -64px;
   bottom: 0;
   position: absolute;
@@ -728,7 +742,7 @@ body::before {
   position: fixed;
   width: 100%;
   background-color: var(--background-color);
-  z-index: 100000;
+  z-index: 1000;
 }
 
 .nav__container {
@@ -743,7 +757,7 @@ body::before {
   background-repeat: no-repeat;
   background-size: cover;
   position: relative;
-  z-index: 100000;
+  z-index: 1000;
 }
 .nav__night-mode-icon {
   width: 87px;
@@ -808,6 +822,10 @@ body::before {
   transition-duration: 0.3s;
 }
 
+.night-mode-icon--desactive {
+  display: none;
+}
+
 .line--cross {
   background-color: transparent;
   transition-property: background-color;
@@ -844,12 +862,19 @@ body::before {
   transition-duration: 0.2s;
 }
 .menu__link {
+  position: relative;
   color: var(--white-color);
   font-family: "Montserrat", sans-serif;
   font-weight: 400;
   font-size: 16px;
-  display: block;
-  width: 85px;
+  display: inline-block;
+}
+.menu__link::before {
+  position: absolute;
+  top: -1.2rem;
+  font-size: 13px;
+  font-weight: 900;
+  color: var(--primary-color);
 }
 .menu__item {
   padding-bottom: 4rem;
@@ -857,11 +882,11 @@ body::before {
 
 .menu--show {
   position: absolute;
-  z-index: 1000;
+  z-index: 10000;
   background-color: var(--black-color);
   top: 0;
   width: 100%;
-  height: 100vh;
+  height: 110vh;
   padding-left: 120px;
   padding-top: 210px;
   opacity: 1;
@@ -869,21 +894,29 @@ body::before {
   transition-duration: 0.2s;
 }
 
-.menu__link {
-  position: relative;
-}
-
-.menu__link::before {
-  content: "01";
+.menu__link::after {
+  content: "";
   position: absolute;
-  top: -1.2rem;
-  font-size: 13px;
-  font-weight: 900;
-  color: var(--primary-color);
+  bottom: -0.5rem;
+  left: 0;
+  width: 100%;
+  height: 6px;
+  background-color: var(--primary-color);
+  transform: scaleX(0);
+  transform-origin: left;
+  transition-property: transform;
+  transition-duration: 0.7s;
 }
 
-.link--1 {
-  font-weight: 800;
+.menu__link:hover::after {
+  transform: scaleX(100%);
+  transform-origin: left;
+  transition-property: transform;
+  transition-duration: 0.7s;
+}
+
+.link--1::before {
+  content: "01";
 }
 
 .link--2::before {
@@ -902,29 +935,10 @@ body::before {
   content: "05";
 }
 
-.menu__link::after {
-  content: "";
-  position: absolute;
-  bottom: -0.5rem;
-  left: 0;
-  width: 83px;
-  height: 6px;
-  background-color: var(--primary-color);
-  transform: scaleX(0);
-  transform-origin: left;
-  transition-property: transform;
-  transition-duration: 0.7s;
+.link--active {
+  font-weight: 800;
 }
-
-.menu__link:hover::after {
-  transform: scaleX(100%);
-  transform-origin: left;
-  transition-property: transform;
-  transition-duration: 0.7s;
-}
-
-.link--1::after {
-  content: "";
+.link--active::after {
   position: absolute;
   bottom: -0.5rem;
   left: 0;
@@ -934,29 +948,10 @@ body::before {
   transform: scale(100%);
 }
 
-.link--3::after {
-  width: 62px;
+.display-block {
+  display: block;
 }
 
-.link--4::after {
-  width: 85px;
+.no-scroll {
+  overflow: hidden;
 }
-
-.link--5::after {
-  width: 80px;
-}
-
-:root {
-  --x-cord: 0;
-  --y-cord: 0;
-  --cursor-color: #EAE1F4;
-  --black-color: black;
-  --white-color: white;
-  --background-color: #EAE1F4;
-  --primary-color: #E8D3FF;
-  --degradados-background: url(../assets/images/degradados.svg);
-  --degradados-nav: url(../assets/images/nav-background.svg);
-  /* Variables CSS */
-}
-
-/* Variables SASS */

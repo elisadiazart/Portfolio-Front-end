@@ -94,7 +94,7 @@
         margin-bottom: 2rem;
     }
 
-    &__graphic{
+    &__graphic {
         padding-bottom: 2.5rem;
     }
 
@@ -140,7 +140,7 @@
         content: '';
         display: block;
         height: 1px;
-        width: calc(100% + 64px + 64px);
+        width: calc(100% + 64px);
         left: -64px;
         bottom: 0;
         position: absolute;
@@ -189,7 +189,7 @@
     padding: 3rem;
 }
 
-.under--line-short{
+.under--line-short {
     position: relative;
 
     &::after {
@@ -206,20 +206,20 @@
     }
 }
 
-.illustration__container{
+.illustration__container {
     margin-bottom: 2rem;
 }
 
-.About-me__container{
-    &::before{
+.About-me__container {
+    &::before {
         display: none;
     }
 
-    &::after{
+    &::after {
         display: none;
     }
 }
 
-.About-me__text-container{
+.About-me__text-container {
     padding-bottom: 2rem;
 }

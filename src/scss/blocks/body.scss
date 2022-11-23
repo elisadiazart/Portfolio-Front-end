@@ -12,7 +12,7 @@ body {
     &::after {
         content: '';
         height: 1px;
-        width: 100%;
+        width: 100vw;
         background-color: var(--black-color);
         position: absolute;
         top: 112px;
