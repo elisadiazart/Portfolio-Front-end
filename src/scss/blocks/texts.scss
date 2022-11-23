@@ -1,10 +1,24 @@
-.very-big-text {
-    font-family: 'Archivo', sans-serif;
-    font-weight: 500;
-    text-transform: uppercase;
-    font-size: 60px;
-    line-height: 59px;
-    margin-bottom: 0;
+.title {
+    &--l {
+        font-family: 'Archivo', sans-serif;
+        font-weight: 500;
+        text-transform: uppercase;
+        font-size: 60px;
+        line-height: 59px;
+        margin-bottom: 0;
+    }
+
+    &--m {
+        font-family: 'Archivo', sans-serif;
+        font-weight: 500;
+        font-size: 31px;
+    }
+
+    &--s {
+        font-family: 'Archivo', sans-serif;
+        font-weight: 500;
+        font-size: 29px;
+    }
 }
 
 .text {
@@ -12,24 +26,17 @@
     font-weight: 400;
     margin: 0;
     margin-bottom: 10px;
-    font-size: 14px;
-}
 
-.text--big {
-    font-size: 14px;
-}
+    &--l {
+        font-size: 14px;
+    }
 
-.text--extra-bold {
-    font-weight: 600;
+    &--extra-bold {
+        font-weight: 600;
+    }
 }
 
 .section {
-    &--title {
-        font-family: 'Archivo', sans-serif;
-        font-weight: 500;
-        font-size: 33px;
-    }
-
     &__link-text {
         text-transform: uppercase;
         font-family: 'Montserrat', sans-serif;
@@ -45,18 +52,4 @@
     line-height: 1.3rem;
     margin: 0;
     margin-bottom: .3rem;
-}
-
-
-.front-end {
-    &__tittle {
-        margin-right: 20%;
-        margin-bottom: 1.2rem;
-    }
-}
-
-.project-title {
-    font-family: 'Archivo', sans-serif;
-    font-weight: 500;
-    font-size: 29px;
 }

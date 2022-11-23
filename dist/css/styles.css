@@ -443,7 +443,7 @@ body::before {
   }
 }
 
-.very-big-text {
+.title--l {
   font-family: "Archivo", sans-serif;
   font-weight: 500;
   text-transform: uppercase;
@@ -451,28 +451,30 @@ body::before {
   line-height: 59px;
   margin-bottom: 0;
 }
+.title--m {
+  font-family: "Archivo", sans-serif;
+  font-weight: 500;
+  font-size: 31px;
+}
+.title--s {
+  font-family: "Archivo", sans-serif;
+  font-weight: 500;
+  font-size: 29px;
+}
 
 .text {
   font-family: "Montserrat", sans-serif;
   font-weight: 400;
   margin: 0;
   margin-bottom: 10px;
+}
+.text--l {
   font-size: 14px;
 }
-
-.text--big {
-  font-size: 14px;
-}
-
 .text--extra-bold {
   font-weight: 600;
 }
 
-.section--title {
-  font-family: "Archivo", sans-serif;
-  font-weight: 500;
-  font-size: 33px;
-}
 .section__link-text {
   text-transform: uppercase;
   font-family: "Montserrat", sans-serif;
@@ -487,17 +489,6 @@ body::before {
   line-height: 1.3rem;
   margin: 0;
   margin-bottom: 0.3rem;
-}
-
-.front-end__tittle {
-  margin-right: 20%;
-  margin-bottom: 1.2rem;
-}
-
-.project-title {
-  font-family: "Archivo", sans-serif;
-  font-weight: 500;
-  font-size: 29px;
 }
 
 .header {
@@ -521,10 +512,6 @@ body::before {
   margin-top: 200px;
   margin-left: 110px;
   margin-bottom: 3rem;
-}
-.header__social-media {
-  margin-top: 2rem;
-  margin-left: 110px;
 }
 
 .scroll-image {
@@ -550,6 +537,10 @@ body::before {
   background-color: var(--black-color);
   z-index: 10000;
 }
+.front-end__tittle {
+  margin-right: 20%;
+  margin-bottom: 1.2rem;
+}
 
 .text--container {
   padding-top: 4rem;
@@ -573,7 +564,7 @@ body::before {
   left: -64px;
   top: 0;
   background-color: var(--black-color);
-  z-index: 10000;
+  z-index: 1000;
 }
 .image--container::after {
   content: "";
@@ -584,7 +575,7 @@ body::before {
   left: -64px;
   bottom: 0;
   background-color: var(--black-color);
-  z-index: 10000;
+  z-index: 1000;
 }
 
 .continuation::before {
@@ -662,7 +653,7 @@ body::before {
   bottom: 0;
   position: absolute;
   background-color: var(--black-color);
-  z-index: 10000;
+  z-index: 1000;
 }
 
 .link {
@@ -712,7 +703,7 @@ body::before {
   bottom: 0;
   position: absolute;
   background-color: var(--black-color);
-  z-index: 10000;
+  z-index: 1000;
   margin-left: 64px;
 }
 
@@ -732,7 +723,7 @@ body::before {
 }
 
 /* ESTILOS DEL FOOTER */
-.header__nav {
+.nav {
   display: flex;
   height: 50px;
   justify-content: space-between;
@@ -742,9 +733,8 @@ body::before {
   position: fixed;
   width: 100%;
   background-color: var(--background-color);
-  z-index: 1000;
+  z-index: 10000;
 }
-
 .nav__container {
   width: 100%;
   display: flex;
@@ -757,7 +747,7 @@ body::before {
   background-repeat: no-repeat;
   background-size: cover;
   position: relative;
-  z-index: 1000;
+  z-index: 10000;
 }
 .nav__night-mode-icon {
   width: 87px;
@@ -782,6 +772,15 @@ body::before {
   left: 20px;
   z-index: 100000;
 }
+.nav__hamburguer-icon {
+  margin: auto;
+  width: 24px;
+  height: 4px;
+  background-color: var(--black-color);
+  position: absolute;
+  transition-property: background-color;
+  transition-duration: 0.9s;
+}
 .nav__hamburguer-icon-container {
   display: flex;
   justify-content: center;
@@ -791,15 +790,6 @@ body::before {
   height: 100px;
   position: relative;
   z-index: 100000;
-}
-.nav__hamburguer-icon {
-  margin: auto;
-  width: 24px;
-  height: 4px;
-  background-color: var(--black-color);
-  position: absolute;
-  transition-property: background-color;
-  transition-duration: 0.9s;
 }
 .nav__hamburguer-icon::after {
   content: "";
@@ -846,6 +836,10 @@ body::before {
   transition-duration: 0.3s;
 }
 
+.social-media {
+  margin-top: 2rem;
+  margin-left: 110px;
+}
 .social-media__item {
   width: 50px;
   padding-bottom: 2rem;
@@ -866,13 +860,13 @@ body::before {
   color: var(--white-color);
   font-family: "Montserrat", sans-serif;
   font-weight: 400;
-  font-size: 16px;
+  font-size: 1rem;
   display: inline-block;
 }
 .menu__link::before {
   position: absolute;
   top: -1.2rem;
-  font-size: 13px;
+  font-size: 0.8125rem;
   font-weight: 900;
   color: var(--primary-color);
 }

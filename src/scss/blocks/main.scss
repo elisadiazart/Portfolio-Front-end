@@ -14,6 +14,11 @@
         background-color: var(--black-color);
         z-index: 10000;
     }
+
+    &__tittle {
+        margin-right: 20%;
+        margin-bottom: 1.2rem;
+    }
 }
 
 .text--container {
@@ -38,7 +43,7 @@
         left: -64px;
         top: 0;
         background-color: var(--black-color);
-        z-index: 10000;
+        z-index: 1000;
     }
 
     &::after {
@@ -50,7 +55,7 @@
         left: -64px;
         bottom: 0;
         background-color: var(--black-color);
-        z-index: 10000;
+        z-index: 1000;
     }
 }
 
@@ -145,7 +150,7 @@
         bottom: 0;
         position: absolute;
         background-color: var(--black-color);
-        z-index: 10000;
+        z-index: 1000;
 
     }
 }
@@ -201,7 +206,7 @@
         bottom: 0;
         position: absolute;
         background-color: var(--black-color);
-        z-index: 10000;
+        z-index: 1000;
         margin-left: 64px;
     }
 }
