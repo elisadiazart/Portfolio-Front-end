@@ -1,8 +1,25 @@
+@use '../mixins/responsive.scss' as *;
+
 .header {
     height: 105vh;
     padding-top: 2rem;
     position: relative;
     overflow: hidden;
+    @include responsive(tablet){
+        position: relative;
+
+    &::after {
+        content: '';
+        display: block;
+        height: 100%;
+        width: 1px;
+        position: absolute;
+        right: 120px;
+        top: 0;
+        background-color: var(--black-color);
+        z-index: 10000;
+    }
+    }
 
 
 
@@ -23,6 +40,18 @@
         margin-top: 200px;
         margin-left: 110px;
         margin-bottom: 3rem;
+
+        @include responsive(tablet){
+            padding-right: 42%;
+            margin-left: 170px;
+            margin-top: 230px;
+        }
+    }
+
+    &__title{
+        @include responsive(tablet){
+            margin-bottom: 1.5rem;
+        }
     }
 
 }
@@ -30,6 +59,12 @@
 .scroll-image {
     position: absolute;
     bottom: 30px;
-    left: 20px;
+    left: 25px;
     z-index: -1;
+    width: 17px;
+    @include responsive(tablet){
+        width: 23px;
+        left: 70px;
+        bottom: 120px;
+    }
 }

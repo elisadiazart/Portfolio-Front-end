@@ -1,17 +1,44 @@
+@use '../mixins/responsive.scss' as *;
+
 .social-media {
     margin-top: 2rem;
     margin-left: 110px;
 
+    @include responsive(tablet){
+        margin-left: 170px;
+        padding-bottom: 170px;
+        position: relative;
+        &::after {
+            content: '';
+            display: block;
+            height: 1px;
+            width: calc(100% + 170px);
+            left: -170px;
+            bottom: 0;
+            position: absolute;
+            background-color: var(--black-color);
+            z-index: 1000;
+        }
+    }
+
     &__item {
         width: 50px;
         padding-bottom: 2rem;
+        @include responsive(tablet){
+            width: 60px;
+        }
 
         &--horizontal {
             padding-bottom: 0rem;
             width: 45px;
             margin: 0;
+
+            @include responsive(tablet){
+                width: 60px;
+            }
         }
     }
+
 
     &__link {
         width: 50px;
@@ -20,6 +47,12 @@
             width: 45px;
             margin-left: .25rem;
             margin-right: .25rem;
+            @include responsive(tablet){
+                width: 60px;
+                margin-left: .5rem;
+                margin-right: .5rem;
+            }
+           
         }
     }
 
@@ -29,5 +62,20 @@
         margin: auto;
         margin-top: 1.5rem;
         padding-bottom: 1.5rem;
+
+        @include responsive(tablet){
+            position: relative;
+            &::after {
+                content: '';
+                display: block;
+                height: 1px;
+                width: calc(100%);
+                left: 0px;
+                bottom: 0;
+                position: absolute;
+                background-color: var(--black-color);
+                z-index: 1000;
+            }
+        }
     }
 }

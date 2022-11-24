@@ -1,0 +1,72 @@
+@use '../mixins/responsive.scss' as *;
+
+.forn__input {
+    content: '';
+    border-radius: 50%;
+    display: block;
+    width: 30px;
+    height: 30px;
+    background-image: url(../assets/images/toggle-day-mode.svg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    top: 50%;
+    left: 20px;
+    z-index: 100000;
+    
+}
+
+.form__input--toggle {
+    display: none;
+}
+
+.form__option--toggle {
+    display: block;
+    width: 87px;
+    height: 40px;
+    border-radius: 130px;
+    background-color: var(--black-color);
+    margin-right: 20px;
+    position: relative;
+    box-shadow: inset 1px 1px 4px rgb(42, 39, 39, .2);
+    transition-property: background-color;
+    transition-duration: .2s;
+    @include responsive(tablet){
+        margin-right: 140px;
+    }
+}
+
+.form__input--toggle:checked+.form__option--toggle {
+    background-color: var(--white-color);
+    transition-property: background-color;
+    transition-duration: .2s;
+}
+
+.form__option--toggle {
+    &::after {
+        content: '';
+        position: absolute;
+        top: 4px;
+        left: 4px;
+        border-radius: 50%;
+        display: block;
+        width: 32px;
+        height: 32px;
+        background-image: url(../assets/images/toggle.svg);
+        background-repeat: no-repeat;
+        background-size: cover;
+        transition-property: transform;
+        transition-duration: .2s;
+        box-shadow: 1px 1px 4px rgb(22, 19, 19, .5);
+        z-index: 100;
+    }
+
+    
+}
+
+.form__input--toggle:checked+.form__option--toggle::after {
+    transform: translateX(142%);
+    transition-property: transform;
+    transition-duration: .2s;
+}

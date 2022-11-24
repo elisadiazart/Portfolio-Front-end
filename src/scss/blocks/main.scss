@@ -1,6 +1,24 @@
+@use '../mixins/responsive.scss' as *;
+
 .front-end {
     position: relative;
     z-index: -1;
+
+    &::after {
+        content: '';
+        display: block;
+        height: 100%;
+        width: 1px;
+        position: absolute;
+        right: 64px;
+        top: 0;
+        background-color: var(--black-color);
+        z-index: 10;
+
+        @include responsive(tablet){
+            right: 120px;
+        }
+    }
 
     &::before {
         content: '';
@@ -27,6 +45,12 @@
     padding-bottom: 4rem;
     margin-left: 64px;
     margin-right: 64px;
+
+    @include responsive(tablet){
+        margin-left: 120px;
+        margin-right: 120px;
+}
+    
 }
 
 
@@ -69,9 +93,7 @@
 }
 
 .graphic-UI {
-    ¡ &__graphic {
-        padding-bottom: 2.5rem;
-    }
+    position: relative;
 
     &::after {
         content: '';
@@ -83,6 +105,9 @@
         top: 0;
         background-color: var(--black-color);
         z-index: 10;
+        @include responsive(tablet){
+            right: 120px;
+        }
     }
 
     &__container {
@@ -107,6 +132,23 @@
 }
 
 .About-me {
+    position: relative;
+
+    &::after {
+        content: '';
+        display: block;
+        height: 100%;
+        width: 1px;
+        position: absolute;
+        right: 64px;
+        top: 0;
+        background-color: var(--black-color);
+        z-index: 10;
+        @include responsive(tablet){
+            right: 120px;
+        }
+    }
+
     &__container {
         &::before {
             display: none;
@@ -119,6 +161,27 @@
 
     &__text-container {
         padding-bottom: 2rem;
+        @include responsive(tablet){
+            padding-bottom: 6rem;
+        }
+    }
+}
+
+.illustration{
+    position: relative;
+    &::after {
+        content: '';
+        display: block;
+        height: 100%;
+        width: 1px;
+        position: absolute;
+        right: 64px;
+        top: 0;
+        background-color: var(--black-color);
+        z-index: 10;
+        @include responsive(tablet){
+            right: 120px;
+        }
     }
 }
 
@@ -135,6 +198,11 @@
     margin-left: 64px;
     margin-right: 64px;
     position: relative;
+
+    @include responsive(tablet){
+        margin-left: 120px;
+        margin-right: 120px;
+}
 }
 
 .continuation {
@@ -156,7 +224,10 @@
         position: absolute;
         background-color: var(--black-color);
         z-index: 1000;
-
+        @include responsive(tablet){
+            width: calc(100% + 120px );
+            left: -120px;
+        }
     }
 }
 
@@ -173,6 +244,10 @@
         position: absolute;
         background-color: var(--black-color);
         z-index: 1000;
+        @include responsive(tablet){
+            width: calc(100% + 120px + 120px);
+            left: -120px;
+        }
     }
 }
 
@@ -190,6 +265,11 @@
         background-color: var(--black-color);
         z-index: 1000;
         margin-left: 64px;
+
+        @include responsive(tablet){
+            left: 0px;
+            margin-left: 0;
+        }
     }
 }
 

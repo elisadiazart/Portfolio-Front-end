@@ -18,6 +18,9 @@ body {
         top: 112px;
         z-index: 100000;
         position: fixed;
+        @include responsive(tablet){
+            top: 150px;
+        }
     }
 
     &::before {
@@ -29,6 +32,9 @@ body {
         top: 0;
         left: 64px;
         z-index: 10000;
+        @include responsive(tablet){
+            left: 120px;
+        }
 
     }
 }
