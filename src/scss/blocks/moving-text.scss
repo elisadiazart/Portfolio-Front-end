@@ -1,0 +1,44 @@
+.container {
+    display: flex;
+    align-items: center;
+    max-width: 300px;
+    height: 50px;
+    margin-left: 64px;
+    margin-right: 64px;
+    color: #333;
+    font-family: 'Archivo', sans-serif;
+    font-size: 1.2rem;
+    overflow: hidden;
+}
+
+@function text-shadow($text-width) {
+    $val: "";
+
+    @for $i from 1 to 20 {
+
+        $val: #{$val},
+        $text-width * $i 0;
+
+    }
+
+    // Este es el resultado del bucle: 150px 0, 300px 0, 450px 0, 600px 0, 750px 0, 900px 0, 1050px 0, 1200px 0, 1350px 0;
+
+    @return $val;
+}
+
+.words {
+    $text-width: 110px;
+    display: inline-block;
+    white-space: nowrap;
+    /* El ancho del text debe ser igual que la distancia entre sombras */
+    width: $text-width;
+    animation: move-text 3s linear infinite;
+    /* Text shadow funciona igual que box-shadow, pero para texto   */
+    text-shadow: text-shadow($text-width);
+}
+
+@keyframes move-text {
+    to {
+        transform: translateX(-100%);
+    }
+}

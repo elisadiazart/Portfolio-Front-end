@@ -7,7 +7,7 @@ const cursor = document.getElementById("cursor");
 const headerElement = document.getElementById("header");
 const rootStyles = document.documentElement.style;
 const bodyContainer = document.getElementById('body-container')
-const NightModeElement = document.getElementById('night-mode')
+const NightModeElement = document.getElementById('toggle')
 
 
 hamburguerElement.addEventListener('click', () => {

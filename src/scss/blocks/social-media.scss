@@ -5,10 +5,29 @@
     &__item {
         width: 50px;
         padding-bottom: 2rem;
+
+        &--horizontal {
+            padding-bottom: 0rem;
+            width: 45px;
+            margin: 0;
+        }
     }
 
     &__link {
-        display: flex;
         width: 50px;
+
+        &--horizontal {
+            width: 45px;
+            margin-left: .25rem;
+            margin-right: .25rem;
+        }
+    }
+
+    &--horizontal {
+        display: flex;
+        justify-content: center;
+        margin: auto;
+        margin-top: 1.5rem;
+        padding-bottom: 1.5rem;
     }
 }

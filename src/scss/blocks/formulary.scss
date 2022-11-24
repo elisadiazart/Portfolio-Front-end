@@ -1,0 +1,17 @@
+.formulary {
+    &__form-field {
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 1rem;
+    }
+
+
+    &__form-input {
+        width: 100%;
+        border: solid 1px var(--black-color);
+    }
+
+    &__text-area {
+        height: 90px;
+    }
+}
