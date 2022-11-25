@@ -37,9 +37,8 @@
     }
 
     &__text-container {
-        margin-top: 200px;
-        margin-left: 110px;
         margin-bottom: 3rem;
+        
 
         @include responsive(tablet){
             padding-right: 42%;
@@ -52,6 +51,14 @@
         @include responsive(tablet){
             margin-bottom: 1.5rem;
         }
+    }
+
+    &__bottom{
+        padding-top: 150px;
+        height: 100vh;
+        margin-left: 64px;
+        padding-left: 46px;
+        border-left: 1px solid var(--black-color);
     }
 
 }

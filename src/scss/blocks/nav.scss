@@ -10,12 +10,26 @@
     position: fixed;
     width: 100%;
     background-color: var(--background-color);
-    z-index: 10000;
+    z-index: 1000;
+
+    &::before {
+        content: '';
+        height: 100%;
+        width: 1px;
+        background-color: var(--black-color);
+        position: absolute;
+        top: 0;
+        left: 64px;
+        z-index: 10000;
+
+    }
 
     @include responsive(tablet){
         height: 100px;
         padding-bottom: 100px;
         z-index: 100000;
+
+        
 
         &::after {
             content: '';
@@ -42,7 +56,7 @@
         background-repeat: no-repeat;
         background-size: cover;
         position: relative;
-        z-index: 10000;
+        z-index: 1000;
         @include responsive(tablet){
             padding-top: 170px;
         }

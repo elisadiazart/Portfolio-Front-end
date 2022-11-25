@@ -16,27 +16,14 @@ body {
         background-color: var(--black-color);
         position: absolute;
         top: 112px;
-        z-index: 100000;
+        z-index: 10000;
         position: fixed;
         @include responsive(tablet){
             top: 150px;
         }
     }
 
-    &::before {
-        content: '';
-        height: 100%;
-        width: 1px;
-        background-color: var(--black-color);
-        position: absolute;
-        top: 0;
-        left: 64px;
-        z-index: 10000;
-        @include responsive(tablet){
-            left: 120px;
-        }
-
-    }
+    
 }
 
 

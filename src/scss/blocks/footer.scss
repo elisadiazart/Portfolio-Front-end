@@ -3,22 +3,6 @@
 .footer {
     position: relative;
 
-    &::after {
-        content: '';
-        display: block;
-        height: 100%;
-        width: 1px;
-        position: absolute;
-        right: 64px;
-        top: 0;
-        background-color: var(--black-color);
-        z-index: 10;
-
-        @include responsive(tablet){
-            right: 120px;
-        }
-    }
-
     &__space {
         height: 50px;
     }

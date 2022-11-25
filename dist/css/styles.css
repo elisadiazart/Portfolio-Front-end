@@ -371,6 +371,13 @@ a {
   --degradados-background: url(../assets/images/degradados.svg);
   --degradados-nav: url(../assets/images/nav-background.svg);
   /* Variables CSS */
+  /* Font sizes */
+  --title-xs: 1.7rem;
+  --title-s: 1.9375rem;
+  --title-m: 2.875rem;
+  --title-l: 3.75rem;
+  --title-xl: 4.1rem;
+  --title-xxl: 6.25rem;
 }
 
 /* Variables SASS */
@@ -390,27 +397,12 @@ body::after {
   background-color: var(--black-color);
   position: absolute;
   top: 112px;
-  z-index: 100000;
+  z-index: 10000;
   position: fixed;
 }
 @media screen and (min-width: 640px) {
   body::after {
     top: 150px;
-  }
-}
-body::before {
-  content: "";
-  height: 100%;
-  width: 1px;
-  background-color: var(--black-color);
-  position: absolute;
-  top: 0;
-  left: 64px;
-  z-index: 10000;
-}
-@media screen and (min-width: 640px) {
-  body::before {
-    left: 120px;
   }
 }
 
@@ -453,6 +445,30 @@ body::before {
   }
 }
 
+.title {
+  font-family: "Archivo", sans-serif;
+  font-weight: 500;
+  margin-bottom: 0;
+}
+.title--xs {
+  font-size: var(--title-xs);
+}
+.title--s {
+  font-size: var(--title-s);
+}
+.title--m {
+  font-size: var(--title-m);
+}
+.title--l {
+  font-size: var(--title-l);
+}
+.title--xl {
+  font-size: var(--title-xl);
+}
+.title--xxl {
+  font-size: var(--title-xxl);
+}
+
 .title--l {
   font-family: "Archivo", sans-serif;
   font-weight: 500;
@@ -467,44 +483,12 @@ body::before {
     line-height: 5.5rem;
   }
 }
-.title--m {
-  font-family: "Archivo", sans-serif;
-  font-weight: 500;
-  font-size: 1.9375rem;
-}
-@media screen and (min-width: 640px) {
-  .title--m {
-    font-size: 4.1rem;
-    margin-bottom: 1.7rem;
-  }
-}
-.title--s {
-  font-family: "Archivo", sans-serif;
-  font-weight: 500;
-  font-size: 1.7rem;
-}
-@media screen and (min-width: 640px) {
-  .title--s {
-    font-size: 2.875rem;
-  }
-}
 
 .text {
   font-family: "Montserrat", sans-serif;
   font-weight: 400;
   margin: 0;
   margin-bottom: 10px;
-}
-.text--m {
-  font-size: 0.75rem;
-  line-height: 1.3rem;
-  margin-bottom: 0.3rem;
-}
-@media screen and (min-width: 640px) {
-  .text--m {
-    font-size: 1.2rem;
-    line-height: 2rem;
-  }
 }
 .text--l {
   font-size: 0.875rem;
@@ -552,8 +536,6 @@ body::before {
   font-size: 16px;
 }
 .header__text-container {
-  margin-top: 200px;
-  margin-left: 110px;
   margin-bottom: 3rem;
 }
 @media screen and (min-width: 640px) {
@@ -567,6 +549,13 @@ body::before {
   .header__title {
     margin-bottom: 1.5rem;
   }
+}
+.header__bottom {
+  padding-top: 150px;
+  height: 100vh;
+  margin-left: 64px;
+  padding-left: 46px;
+  border-left: 1px solid var(--black-color);
 }
 
 .scroll-image {
@@ -584,180 +573,28 @@ body::before {
   }
 }
 
-.front-end {
+.article {
   position: relative;
-  z-index: -1;
-}
-.front-end::after {
-  content: "";
-  display: block;
-  height: 100%;
-  width: 1px;
-  position: absolute;
-  right: 64px;
-  top: 0;
-  background-color: var(--black-color);
-  z-index: 10;
-}
-@media screen and (min-width: 640px) {
-  .front-end::after {
-    right: 120px;
-  }
-}
-.front-end::before {
-  content: "";
-  display: block;
-  height: 1px;
-  width: 100%;
-  position: absolute;
-  left: 0;
-  top: 0;
-  background-color: var(--black-color);
-  z-index: 10000;
-}
-.front-end__tittle {
-  margin-right: 20%;
-  margin-bottom: 1.2rem;
-}
-
-.text--container {
-  padding-top: 2rem;
-  padding-right: 46px;
-  padding-left: 46px;
-  padding-bottom: 4rem;
   margin-left: 64px;
-  margin-right: 64px;
-}
-@media screen and (min-width: 640px) {
-  .text--container {
-    margin-left: 120px;
-    margin-right: 120px;
-  }
-}
-
-.section--end {
-  position: relative;
-}
-.section--end::after {
-  content: "";
-  display: block;
-  height: 1px;
-  width: calc(100% + 64px);
-  position: absolute;
-  right: 0;
-  bottom: 0;
-  background-color: var(--black-color);
-  z-index: 10000;
-}
-
-.icon__link {
-  display: flex;
-  align-items: center;
   padding-top: 1rem;
+  margin-right: 64px;
+  border-left: 1px solid var(--black-color);
+  border-right: 1px solid var(--black-color);
 }
-.icon__icon {
-  width: 35px;
+.article--container {
+  border-top: 1px solid var(--black-color);
+  border-bottom: 1px solid var(--black-color);
 }
-.icon__text {
-  text-transform: uppercase;
-  font-family: "Montserrat", sans-serif;
-  font-size: 0.75rem;
-  font-weight: 600;
-  padding-left: 0.6rem;
+.article__content {
+  padding-left: 2rem;
 }
 
-.graphic-UI {
-  position: relative;
-}
-.graphic-UI::after {
-  content: "";
-  display: block;
-  height: 100%;
-  width: 1px;
-  position: absolute;
-  right: 64px;
-  top: 0;
-  background-color: var(--black-color);
-  z-index: 10;
-}
-@media screen and (min-width: 640px) {
-  .graphic-UI::after {
-    right: 120px;
-  }
-}
-.graphic-UI__container {
-  position: relative;
-  z-index: 0;
-}
-.graphic-UI__container::after {
-  display: none;
-}
-.graphic-UI__image {
+.skills {
   margin: 0;
-  width: 100%;
-  object-fit: cover;
+  padding-bottom: 1rem;
 }
-.graphic-UI__image--icons {
-  padding: 3rem;
-}
-
-.About-me {
-  position: relative;
-}
-.About-me::after {
-  content: "";
-  display: block;
-  height: 100%;
-  width: 1px;
-  position: absolute;
-  right: 64px;
-  top: 0;
-  background-color: var(--black-color);
-  z-index: 10;
-}
-@media screen and (min-width: 640px) {
-  .About-me::after {
-    right: 120px;
-  }
-}
-.About-me__container::before {
-  display: none;
-}
-.About-me__container::after {
-  display: none;
-}
-.About-me__text-container {
-  padding-bottom: 2rem;
-}
-@media screen and (min-width: 640px) {
-  .About-me__text-container {
-    padding-bottom: 6rem;
-  }
-}
-
-.illustration {
-  position: relative;
-}
-.illustration::after {
-  content: "";
-  display: block;
-  height: 100%;
-  width: 1px;
-  position: absolute;
-  right: 64px;
-  top: 0;
-  background-color: var(--black-color);
-  z-index: 10;
-}
-@media screen and (min-width: 640px) {
-  .illustration::after {
-    right: 120px;
-  }
-}
-
-.image--container-double {
-  display: flex;
-  max-width: 50%;
+.skills__item {
+  margin-bottom: 1rem;
 }
 
 .image--container {
@@ -803,7 +640,7 @@ body::before {
 }
 .under--line-full::after {
   display: block;
-  height: 0.2px;
+  height: 1px;
   width: calc(100% + 64px + 64px);
   left: -64px;
   bottom: 0;
@@ -824,13 +661,13 @@ body::before {
 .under--line-short::after {
   content: "";
   display: block;
-  height: 0.3px;
+  height: 1px;
   width: 100%;
   left: -64px;
   bottom: 0;
   position: absolute;
   background-color: var(--black-color);
-  z-index: 1000;
+  z-index: 10000;
   margin-left: 64px;
 }
 @media screen and (min-width: 640px) {
@@ -874,22 +711,6 @@ body::before {
 .footer {
   position: relative;
 }
-.footer::after {
-  content: "";
-  display: block;
-  height: 100%;
-  width: 1px;
-  position: absolute;
-  right: 64px;
-  top: 0;
-  background-color: var(--black-color);
-  z-index: 10;
-}
-@media screen and (min-width: 640px) {
-  .footer::after {
-    right: 120px;
-  }
-}
 .footer__space {
   height: 50px;
 }
@@ -904,6 +725,16 @@ body::before {
   position: fixed;
   width: 100%;
   background-color: var(--background-color);
+  z-index: 1000;
+}
+.nav::before {
+  content: "";
+  height: 100%;
+  width: 1px;
+  background-color: var(--black-color);
+  position: absolute;
+  top: 0;
+  left: 64px;
   z-index: 10000;
 }
 @media screen and (min-width: 640px) {
@@ -936,7 +767,7 @@ body::before {
   background-repeat: no-repeat;
   background-size: cover;
   position: relative;
-  z-index: 10000;
+  z-index: 1000;
 }
 @media screen and (min-width: 640px) {
   .nav__container {
@@ -1032,7 +863,6 @@ body::before {
 
 .social-media {
   margin-top: 2rem;
-  margin-left: 110px;
 }
 @media screen and (min-width: 640px) {
   .social-media {
@@ -1203,6 +1033,10 @@ body::before {
   transform: scale(100%);
 }
 
+.formulary {
+  margin-left: 64px;
+  margin-right: 64px;
+}
 .formulary__form-field {
   display: flex;
   flex-direction: column;
@@ -1226,23 +1060,9 @@ body::before {
   }
 }
 
-.container {
-  display: flex;
-  align-items: center;
-  max-width: 100%;
-  height: 50px;
-  margin-left: 64px;
-  margin-right: 64px;
-  color: #333;
-  font-family: "Archivo", sans-serif;
-  font-size: 1.2rem;
+.text-move {
+  padding-block: 0.5rem;
   overflow: hidden;
-}
-@media screen and (min-width: 640px) {
-  .container {
-    margin-left: 120px;
-    margin-right: 120px;
-  }
 }
 
 .words {

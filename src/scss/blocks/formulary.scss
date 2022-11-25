@@ -1,6 +1,8 @@
 @use '../mixins/responsive.scss' as *;
 
 .formulary {
+    margin-left: 64px;
+    margin-right: 64px;
     &__form-field {
         display: flex;
         flex-direction: column;
