@@ -237,7 +237,7 @@
     &::after {
         content: '';
         display: block;
-        height: 1px;
+        height: .2px;
         width: calc(100% + 64px + 64px);
         left: -64px;
         bottom: 0;
@@ -257,7 +257,7 @@
     &::after {
         content: '';
         display: block;
-        height: 1px;
+        height: .3px;
         width: 100%;
         left: -64px;
         bottom: 0;

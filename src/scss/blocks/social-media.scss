@@ -8,10 +8,10 @@
         margin-left: 170px;
         padding-bottom: 170px;
         position: relative;
-        &::after {
+        &::before {
             content: '';
             display: block;
-            height: 1px;
+            height: .3px;
             width: calc(100% + 170px);
             left: -170px;
             bottom: 0;

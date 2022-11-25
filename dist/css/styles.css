@@ -519,7 +519,7 @@ body::before {
 }
 
 .header {
-  height: 105vh;
+  height: 100vh;
   padding-top: 2rem;
   position: relative;
   overflow: hidden;
@@ -804,7 +804,7 @@ body::before {
 .under--line-full::after {
   content: "";
   display: block;
-  height: 1px;
+  height: 0.2px;
   width: calc(100% + 64px + 64px);
   left: -64px;
   bottom: 0;
@@ -825,7 +825,7 @@ body::before {
 .under--line-short::after {
   content: "";
   display: block;
-  height: 1px;
+  height: 0.3px;
   width: 100%;
   left: -64px;
   bottom: 0;
@@ -1041,10 +1041,10 @@ body::before {
     padding-bottom: 170px;
     position: relative;
   }
-  .social-media::after {
+  .social-media::before {
     content: "";
     display: block;
-    height: 1px;
+    height: 0.3px;
     width: calc(100% + 170px);
     left: -170px;
     bottom: 0;
