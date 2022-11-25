@@ -235,7 +235,6 @@
     position: relative;
 
     &::after {
-        content: '';
         display: block;
         height: .2px;
         width: calc(100% + 64px + 64px);

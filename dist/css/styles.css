@@ -802,7 +802,6 @@ body::before {
   position: relative;
 }
 .under--line-full::after {
-  content: "";
   display: block;
   height: 0.2px;
   width: calc(100% + 64px + 64px);
