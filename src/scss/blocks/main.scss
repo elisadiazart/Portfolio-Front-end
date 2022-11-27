@@ -6,8 +6,12 @@
     margin-left: 64px;
     padding-top: 1rem;
     margin-right: 64px;
-    border-left: 1px solid var(--black-color);
+    border-left: 1px  solid var(--black-color);
     border-right: 1px solid var(--black-color);
+    @include responsive(tablet){
+        margin-left: 106px;
+        margin-right: 106px;
+    }
 
     &--container{
         border-top: 1px solid var(--black-color);
@@ -17,38 +21,66 @@
   
     &__content {
       padding-left: 2rem;
+      @include responsive(tablet){
+        padding-left: 6.875rem;
+    }
+    }
+
+    &__text-container{
+        padding-left: 46px;
+        padding-right: 46px;
+        @include responsive(tablet){
+            padding-top: 3rem;
+            padding-left: 6.875rem;
+            padding-right: 6.875rem;
+            padding-bottom: 3rem;
+        }
+    }
+
+    &__text{
+        margin: 0;
+        padding-bottom: 1.5rem;
+        padding-top: 1rem;
     }
 
     
-  }
+}
 
   .skills {
     margin: 0;
-    padding-bottom: 1rem;
+    padding-bottom: 2rem;
+    padding-top: 1rem;
     &__item {
-      margin-bottom: 1rem;
+      margin-bottom: .5rem;
     }
-  }
+}
+
+.image{
+    object-fit: contain;
+    &__container{
+        margin-right: .3px;
+    }
+
+    &__decoration{
+        width: calc(100% + 128px);
+        transform: translateX(-64px);
+        border-top: 1px solid var(--black-color);
+        @include responsive(tablet){
+            width: calc(100% + 106px + 106px);
+            transform: translateX(-106px);
+        }
+
+        &--short{
+            width: 100%;
+            transform: translateX(0);
+        }
+    }
+}
 
 //UNDERLINES//
 
-.image--container {
-    margin: 0;
-    margin-left: 64px;
-    margin-right: 64px;
-    position: relative;
 
-    @include responsive(tablet){
-        margin-left: 120px;
-        margin-right: 120px;
-}
-}
 
-.continuation {
-    &::before {
-        display: none;
-    }
-}
 
 .under--line {
     position: relative;

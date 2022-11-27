@@ -1,19 +1,38 @@
+@use '../mixins/responsive.scss' as *;
+
 .title {
     font-family: 'Archivo', sans-serif;
     font-weight: 500;
     margin-bottom: 0;
+
+    &--project{
+      margin-bottom: 1.5rem;
+    }
   
     &--xs {
       font-size: var(--title-xs);
+      @include responsive(tablet){
+        font-size: 3rem;
+        font-weight: 500px;
+    }
     }
     &--s {
       font-size: var(--title-s);
+      @include responsive(tablet){
+        font-size: 3.5rem;
+        font-weight: 500px;
+    }
     }
     &--m {
       font-size: var(--title-m);
     }
     &--l {
       font-size: var(--title-l);
+      @include responsive(tablet){
+        font-size: 7rem;
+        line-height: 6rem;
+        margin-left: -5px;
+    }
     }
     &--xl {
       font-size: var(--title-xl);

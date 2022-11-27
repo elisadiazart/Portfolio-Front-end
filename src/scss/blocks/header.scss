@@ -14,7 +14,7 @@
         height: 100%;
         width: 1px;
         position: absolute;
-        right: 120px;
+        right: 106px;
         top: 0;
         background-color: var(--black-color);
         z-index: 10000;
@@ -42,12 +42,16 @@
 
         @include responsive(tablet){
             padding-right: 42%;
-            margin-left: 170px;
-            margin-top: 230px;
+            margin-left: 20px;
+            margin-top: 110px;
         }
     }
 
     &__title{
+        font-family: 'Archivo', sans-serif;
+        text-transform: uppercase;
+        font-weight: 400;
+        margin-bottom: .5rem;
         @include responsive(tablet){
             margin-bottom: 1.5rem;
         }
@@ -59,6 +63,9 @@
         margin-left: 64px;
         padding-left: 46px;
         border-left: 1px solid var(--black-color);
+        @include responsive(tablet){
+            margin-left: 106px;
+        }
     }
 
 }
@@ -71,7 +78,7 @@
     width: 17px;
     @include responsive(tablet){
         width: 23px;
-        left: 70px;
-        bottom: 120px;
+        left: 50px;
+        bottom: 30px;
     }
 }

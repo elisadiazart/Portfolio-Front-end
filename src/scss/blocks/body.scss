@@ -3,7 +3,8 @@
 body {
     position: relative;
     background-color: var(--background-color);
-
+    font-family:  'Montserrat', sans-serif;
+    
     @include responsive(laptop) {
         cursor: none;
     }

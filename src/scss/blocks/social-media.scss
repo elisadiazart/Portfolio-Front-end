@@ -5,27 +5,16 @@
     
 
     @include responsive(tablet){
-        margin-left: 170px;
+        margin-left: calc(100% - 106px - 126px);
         padding-bottom: 170px;
         position: relative;
-        &::before {
-            content: '';
-            display: block;
-            height: .3px;
-            width: calc(100% + 170px);
-            left: -170px;
-            bottom: 0;
-            position: absolute;
-            background-color: var(--black-color);
-            z-index: 1000;
-        }
     }
 
     &__item {
         width: 50px;
         padding-bottom: 2rem;
         @include responsive(tablet){
-            width: 60px;
+            width: 70px;
         }
 
         &--horizontal {
@@ -34,7 +23,7 @@
             margin: 0;
 
             @include responsive(tablet){
-                width: 60px;
+                width: 70px;
             }
         }
     }

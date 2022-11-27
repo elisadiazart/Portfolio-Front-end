@@ -21,7 +21,11 @@
 }
 
 .words {
-    $text-width: 110px;
+    font-family: 'Archivo', sans-serif;
+    $text-width: 120px;
+    @include responsive(tablet){
+        $text-width: 150px;
+    }
     display: inline-block;
     white-space: nowrap;
     /* El ancho del text debe ser igual que la distancia entre sombras */
@@ -29,6 +33,7 @@
     animation: move-text 3s linear infinite;
     /* Text shadow funciona igual que box-shadow, pero para texto   */
     text-shadow: text-shadow($text-width);
+    
 }
 
 @keyframes move-text {
