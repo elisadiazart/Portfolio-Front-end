@@ -1,5 +1,13 @@
 @use '../mixins/responsive.scss' as *;
 
+.night-icon{
+    @include responsive(laptop){
+        position: absolute;
+        right: 70px;
+        top: 145px;
+    }
+}
+
 .forn__input {
     content: '';
     border-radius: 50%;

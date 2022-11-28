@@ -33,6 +33,9 @@
         line-height: 6rem;
         margin-left: -5px;
     }
+    @include responsive(laptop){
+       font-size: 6.5rem;
+  }
     }
     &--xl {
       font-size: var(--title-xl);

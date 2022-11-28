@@ -1,8 +1,20 @@
+@use '../mixins/responsive.scss' as *;
+
 .menu {
     position: absolute;
     opacity: 0;
     transition-property: opacity;
     transition-duration: .2s;
+    @include responsive(laptop){
+        opacity: 1;
+        background: var(--black-color);
+        width: 447px;
+        height: 110vh;
+        top: 110px;
+        padding-top: 260px;
+        transform: translateY(-100px);
+    }
+    
 
     &__link {
         position: relative;
@@ -12,17 +24,39 @@
         font-size: 1rem;
         display: inline-block;
 
+        @include responsive(tablet){
+            font-size: 1.2rem;
+        }
+        @include responsive(laptop){
+            text-align: right;
+            font-size: 1rem;
+        }
+
+        
+
         &::before {
             position: absolute;
             top: -1.2rem;
             font-size: 0.8125rem;
             font-weight: 900;
             color: var(--primary-color);
+            @include responsive(laptop){
+                right: 0;
+            }
         }
     }
 
     &__item {
         padding-bottom: 4rem;
+        @include responsive(tablet){
+            padding-left: 42px;
+            
+        }
+        @include responsive(laptop){
+            text-align: right;
+            padding-right: 120px;
+            padding-bottom: 6rem;
+        }
     }
 
     &__decoration{
@@ -36,6 +70,16 @@
         background-color: transparent;
         border-left: 1px solid var(--white-color);
         z-index: 100000;
+        @include responsive(tablet){
+            margin-left: 106px;
+        }
+        @include responsive(laptop){
+            border-left: none;
+            margin-top: 190px;
+            border-top: 1px solid var(--white-color);
+            left: -106px;
+            width: 447px;
+        }
     }
 }
 
@@ -53,6 +97,9 @@
     opacity: 1;
     transition-property: opacity;
     transition-duration: .2s;
+    @include responsive(tablet){
+        padding-top: 300px;
+    }
 
 
 }
@@ -71,6 +118,7 @@
     transform-origin: left;
     transition-property: transform;
     transition-duration: .7s;
+    
 }
 
 .menu__link:hover::after {
@@ -111,7 +159,7 @@
         position: absolute;
         bottom: -.5rem;
         left: 0;
-        width: 53px;
+        width: 100%;
         height: 6px;
         background-color: var(--primary-color);
         transform: scale(100%);

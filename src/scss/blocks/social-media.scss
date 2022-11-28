@@ -9,12 +9,21 @@
         padding-bottom: 170px;
         position: relative;
     }
-
+        @include responsive(laptop){
+            display: flex;
+            margin-left: 0;
+            position: absolute;
+            right: 300px;
+        }
+    
     &__item {
         width: 50px;
         padding-bottom: 2rem;
         @include responsive(tablet){
             width: 70px;
+        }
+        @include responsive(laptop){
+            padding-bottom: 0;
         }
 
         &--horizontal {
@@ -31,6 +40,15 @@
 
     &__link {
         width: 50px;
+        @include responsive(laptop){
+        margin: .5rem;
+        border-radius: 50%;
+        &:hover{
+            border: 4px solid white;
+        }
+            
+        }
+            
 
         &--horizontal {
             width: 45px;

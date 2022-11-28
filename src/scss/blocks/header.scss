@@ -18,6 +18,9 @@
         top: 0;
         background-color: var(--black-color);
         z-index: 10000;
+        @include responsive(laptop){
+            right: 180px;
+        }
     }
     }
 
@@ -45,6 +48,9 @@
             margin-left: 20px;
             margin-top: 110px;
         }
+        @include responsive(laptop){
+            padding-right: 220px;
+        }
     }
 
     &__title{
@@ -54,6 +60,9 @@
         margin-bottom: .5rem;
         @include responsive(tablet){
             margin-bottom: 1.5rem;
+        }
+        @include responsive(laptop){
+            margin-bottom: .1rem;
         }
     }
 
@@ -65,6 +74,10 @@
         border-left: 1px solid var(--black-color);
         @include responsive(tablet){
             margin-left: 106px;
+        }
+        @include responsive(laptop){
+            margin-left: 550px;
+            border-left: none;
         }
     }
 
@@ -80,5 +93,11 @@
         width: 23px;
         left: 50px;
         bottom: 30px;
+    }
+    @include responsive(laptop){
+        width: 17px ;
+        left: auto;
+        right: 220px;
+        bottom: 60px;
     }
 }

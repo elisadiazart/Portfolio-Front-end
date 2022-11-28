@@ -2,6 +2,10 @@
 
 .footer {
     position: relative;
+        @include responsive(laptop){
+            margin-left: 447px;
+        }
+    
 
     &__space {
         height: 50px;

@@ -1,6 +1,13 @@
 @use '../mixins/responsive.scss' as *;
 @use '../mixins/pseudo.scss' as *;
 
+
+.main{
+    @include responsive(laptop){
+        margin-left: 447px;
+    }
+}
+
 .article {
     position: relative;
     margin-left: 64px;
@@ -11,6 +18,9 @@
     @include responsive(tablet){
         margin-left: 106px;
         margin-right: 106px;
+    }
+    @include responsive(laptop){
+        margin-right: 180px;
     }
 
     &--container{
@@ -68,6 +78,9 @@
         @include responsive(tablet){
             width: calc(100% + 106px + 106px);
             transform: translateX(-106px);
+        }
+        @include responsive(laptop){
+            width: calc(100% + 106px + 180px)
         }
 
         &--short{

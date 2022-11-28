@@ -18,6 +18,9 @@
         @include responsive(tablet){
             font-size: 1.2rem;
         }
+        @include responsive(laptop){
+            font-size: 1rem;
+        }
     }
 
     &--s{

@@ -1,3 +1,6 @@
+@use '../mixins/responsive.scss' as *;
+
+
 :root {
   --x-cord: 0;
   --y-cord: 0;
@@ -9,7 +12,13 @@
   --background-color: #EAE1F4;
   --primary-color: #E8D3FF;
   --degradados-background: url(../assets/images/degradados.svg);
+  @include responsive(laptop) {
+    --degradados-background: url(../assets/images/degradados-laptop.svg);
+  }
   --degradados-nav: url(../assets/images/nav-background.svg);
+  @include responsive(laptop) {
+    --degradados-nav: url(../assets/images/nav-background-laptop.svg);
+  }
   /* Variables CSS */
 
   /* Font sizes */

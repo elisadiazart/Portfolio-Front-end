@@ -11,6 +11,8 @@
     width: 100%;
     background-color: var(--background-color);
     z-index: 1000;
+    
+    
 
     &::before {
         content: '';
@@ -23,6 +25,10 @@
         z-index: 10000;
         @include responsive(tablet){
             left: 106px;
+        }
+        @include responsive(laptop){
+            left: auto;
+            right: 180px;
         }
 
     }
@@ -77,6 +83,7 @@
             width: 35px;
             height: 6px;
         }
+        
 
         &-container {
             display: flex;
@@ -90,6 +97,10 @@
 
             @include responsive(tablet){
                 margin-left: 45px;
+            }
+
+            @include responsive(laptop){
+                display: none;
             }
         }
 
