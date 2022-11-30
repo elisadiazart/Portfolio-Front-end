@@ -1001,6 +1001,10 @@ body::after {
   }
 }
 
+.white::before {
+  background-color: var(--white-color);
+}
+
 .night-mode-icon--desactive {
   display: none;
 }

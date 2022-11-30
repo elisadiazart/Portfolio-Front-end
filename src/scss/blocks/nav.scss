@@ -33,6 +33,8 @@
 
     }
 
+    
+
     @include responsive(tablet){
         height: 100px;
         padding-bottom: 100px;
@@ -133,6 +135,13 @@
                 height: 6px;
             }
         }
+    }
+}
+
+.white{
+        
+    &::before{
+        background-color: var(--white-color);
     }
 }
 

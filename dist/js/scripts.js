@@ -8,6 +8,7 @@ const headerElement = document.getElementById("header");
 const rootStyles = document.documentElement.style;
 const bodyContainer = document.getElementById('body-container')
 const NightModeElement = document.getElementById('toggle')
+const NavElement = document.getElementById('nav')
 
 
 hamburguerElement.addEventListener('click', () => {
@@ -17,7 +18,8 @@ hamburguerElement.addEventListener('click', () => {
   bodyElement.classList.toggle('cursor-visible')
   bodyElement.classList.toggle('no-scroll')
   NightModeElement.classList.toggle('night-mode-icon--desactive')
-
+  NavElement.classList.toggle('white')
+  
 });
 
 window.addEventListener("mousemove", (ev) => {
