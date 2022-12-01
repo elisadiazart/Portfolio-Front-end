@@ -522,12 +522,17 @@ body::after {
 .text--m {
   font-size: 0.8rem;
 }
+@media screen and (min-width: 640px) {
+  .text--m {
+    font-size: 1.1rem;
+  }
+}
 .text--l {
   font-size: 0.9rem;
 }
 @media screen and (min-width: 640px) {
   .text--l {
-    font-size: 1.2rem;
+    font-size: 1.6rem;
   }
 }
 @media screen and (min-width: 1024px) {
@@ -536,15 +541,15 @@ body::after {
   }
 }
 .text--s {
-  font-size: 0.7rem;
+  font-size: 0.8rem;
 }
 @media screen and (min-width: 640px) {
   .text--s {
-    font-size: 1rem;
+    font-size: 1.2rem;
   }
 }
 .text--xl {
-  font-size: 1.3rem;
+  font-size: 1.6rem;
 }
 @media screen and (min-width: 640px) {
   .text--xl {
@@ -695,6 +700,9 @@ body::after {
   border-top: 1px solid var(--black-color);
   border-bottom: 1px solid var(--black-color);
 }
+.article--container--continuation {
+  border-top: 0;
+}
 .article__content {
   padding-left: 2rem;
 }
@@ -706,6 +714,7 @@ body::after {
 .article__text-container {
   padding-left: 46px;
   padding-right: 46px;
+  padding-bottom: 2rem;
 }
 @media screen and (min-width: 640px) {
   .article__text-container {
@@ -719,6 +728,16 @@ body::after {
   margin: 0;
   padding-bottom: 1.5rem;
   padding-top: 1rem;
+}
+.article__link {
+  text-transform: uppercase;
+  margin-bottom: 0;
+  padding: 0.8rem;
+  border-radius: 50px;
+  border: 1px solid black;
+  font-weight: 800;
+  text-align: center;
+  background-color: white;
 }
 
 .skills {
@@ -735,6 +754,13 @@ body::after {
 }
 .image__container {
   margin-right: 0.3px;
+}
+.image__container--double {
+  display: flex;
+}
+.image__double {
+  width: 50%;
+  object-fit: cover;
 }
 .image__decoration {
   width: calc(100% + 128px);
@@ -755,6 +781,14 @@ body::after {
 .image__decoration--short {
   width: 100%;
   transform: translateX(0);
+}
+.image__icons {
+  padding: 2rem;
+}
+@media screen and (min-width: 640px) {
+  .image__icons {
+    padding: 6rem;
+  }
 }
 
 .under--line {
@@ -1284,8 +1318,15 @@ body::after {
 }
 
 .formulary {
-  margin-left: 64px;
-  margin-right: 64px;
+  margin-left: 2rem;
+  margin-right: 2rem;
+  padding-bottom: 2rem;
+}
+@media screen and (min-width: 640px) {
+  .formulary {
+    margin-left: 4rem;
+    margin-right: 4rem;
+  }
 }
 .formulary__form-field {
   display: flex;

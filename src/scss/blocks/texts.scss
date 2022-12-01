@@ -10,13 +10,16 @@
 
     &--m{
         font-size: .8rem;
+        @include responsive(tablet){
+            font-size: 1.1rem;
+        }
     }
 
     &--l {
         font-size: .9rem;
 
         @include responsive(tablet){
-            font-size: 1.2rem;
+            font-size: 1.6rem;
         }
         @include responsive(laptop){
             font-size: 1rem;
@@ -24,14 +27,14 @@
     }
 
     &--s{
-        font-size: .7rem;
+        font-size: .8rem;
         @include responsive(tablet){
-            font-size: 1rem;
+            font-size: 1.2rem;
         }
     }
 
     &--xl{
-        font-size: 1.3rem;
+        font-size: 1.6rem;
         @include responsive(tablet){
             font-size: 1.6rem;
         }

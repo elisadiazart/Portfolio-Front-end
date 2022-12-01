@@ -22,7 +22,7 @@
 
 .words {
     font-family: 'Archivo', sans-serif;
-    $text-width: 120px;
+    $text-width: 150px;
     @include responsive(tablet){
         $text-width: 150px;
     }

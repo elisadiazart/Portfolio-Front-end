@@ -1,8 +1,14 @@
 @use '../mixins/responsive.scss' as *;
 
 .formulary {
-    margin-left: 64px;
-    margin-right: 64px;
+    margin-left: 2rem;
+    margin-right: 2rem;
+    padding-bottom: 2rem;
+
+    @include responsive(tablet){
+        margin-left:4rem;
+        margin-right: 4rem;
+    }
     &__form-field {
         display: flex;
         flex-direction: column;
