@@ -2,6 +2,10 @@
 
 .social-media {
     margin-top: 2rem;
+
+    &--horizontal{
+        display: flex;
+    }
     
 
     @include responsive(tablet){

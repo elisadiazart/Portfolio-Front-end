@@ -541,6 +541,7 @@ body::after {
   }
 }
 .text--s {
+  line-height: 1.2rem;
   font-size: 0.8rem;
 }
 @media screen and (min-width: 640px) {
@@ -1065,6 +1066,9 @@ body::after {
 
 .social-media {
   margin-top: 2rem;
+}
+.social-media--horizontal {
+  display: flex;
 }
 @media screen and (min-width: 640px) {
   .social-media {

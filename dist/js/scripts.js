@@ -32,46 +32,40 @@ headerElement.addEventListener("mouseenter", () => {
   console.log("pink");
 });
 
+const allElementsIntersection = document.querySelectorAll(
+  '[data-background-color]'
+);
+
 const options = {
   root: null,
   rootMargin: '0px',
   threshold: 0.3
-}
+};
 
-const callback = (entries) => {
+const callback = entries => {
   entries.forEach(entry => {
     if (entry.isIntersecting) {
-      console.log(entry.target.dataset)
-
-      if (entry.target.dataset.background) {
-        if (entry.target.dataset.background === 'blue') {
-          rootStyles.setProperty('--background-color', '#E1EBF4')
-          rootStyles.setProperty('--degradados-background', 'url(../assets/images/degradados-blue.svg)')
-          rootStyles.setProperty('--degradados-nav', 'url(../assets/images/nav-background-blue.svg)')
-          rootStyles.setProperty('--cursor-color', '#E1EBF4')
-        } else if (entry.target.dataset.background === 'green') {
-          rootStyles.setProperty('--background-color', '#E1F4ED')
-          rootStyles.setProperty('--degradados-background', 'url(../assets/images/degradados-green.svg)')
-          rootStyles.setProperty('--degradados-nav', 'url(../assets/images/nav-background-green.svg)')
-          rootStyles.setProperty('--cursor-color', '#E1F4ED')
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          console.log(entry.target.dataset);
+          rootStyles.setProperty(
+            '--background-color',
+            entry.target.dataset.backgroundColor
+          );
+          rootStyles.setProperty(
+            '--degradados-background',
+            `url(../assets/images/${entry.target.dataset.backgroundImage})`
+          );
         }
-      } else {
-        rootStyles.setProperty('--background-color', '#EAE1F4')
-        rootStyles.setProperty('--degradados-background', 'url(../assets/images/degradados.svg)')
-        rootStyles.setProperty('--degradados-nav', 'url(../assets/images/nav-background.svg)')
-        rootStyles.setProperty('--cursor-color', '#EAE1F4')
-
-      }
-
-
+      });
     }
-  })
-}
+  });
+};
+
+const observer = new IntersectionObserver(callback, options);
+
+allElementsIntersection.forEach(article => observer.observe(article));
 
 
-
-const observer = new IntersectionObserver(callback, options)
-observer.observe(document.querySelector('.front-end'))
-observer.observe(document.querySelector('.graphic-UI'))
 
 console.log('hola')

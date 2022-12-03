@@ -27,6 +27,7 @@
     }
 
     &--s{
+        line-height: 1.2rem;
         font-size: .8rem;
         @include responsive(tablet){
             font-size: 1.2rem;
