@@ -19,7 +19,7 @@
         font-size: .9rem;
 
         @include responsive(tablet){
-            font-size: 1.6rem;
+            font-size: 1.3rem;
         }
         @include responsive(laptop){
             font-size: 1rem;
@@ -31,6 +31,10 @@
         font-size: .8rem;
         @include responsive(tablet){
             font-size: 1.2rem;
+            line-height: 1.7rem;
+        }
+        @include responsive(laptop){
+            font-size: .9rem;
         }
     }
 
