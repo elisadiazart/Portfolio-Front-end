@@ -182,10 +182,12 @@
       </div>
       <div class="grid--UI__item--2">
         <div class="image__decoration"></div>
-        <div class="image__container image__container--double">
+        <div class="image__container ">
           <div class="image__container--double">
-          <img class="image__double" src="../dist/assets/images/Graphic-UI 02.png" alt="" class="image">
-          <img class="image__double" src="../dist/assets/images/Graphic-UI 03.png" alt="" class="image">
+            <div class="image__double--1">
+          <img class="image__double " src="../dist/assets/images/Graphic-UI 02.png" alt="" class="image"></div>
+          <div class="image__double--2">
+          <img class="image__double image__double--2" src="../dist/assets/images/Graphic-UI 03.png" alt="" class="image"></div>
         </div>
         </div>
         <div class="image__decoration image__decoration--short "></div>
@@ -209,24 +211,35 @@
         <div class="image__decoration"></div>
       </div>
       </div>
-        <div class="image__container">
-          <img src="assets/images/Graphic design 01.png" alt="" class="image">
-        </div>
-        <div class="image__decoration image__decoration--short"></div>
-        <div class="image__container">
-          <img src="assets/images/Graphic design 02.png" alt="" class="image">
-        </div>
+      <div class="graphic-design__image-container"><div class="image__container">
+        <img src="assets/images/Graphic design 01.png" alt="" class="image">
+      </div>
+      <div class="image__decoration image__decoration--short"></div>
+      <div class="image__container">
+        <img src="assets/images/Graphic design 02.png" alt="" class="image">
+      </div></div>
+      <div class="graphic-design__image-container graphic-design__image-container--2">
         <div class="image__decoration"></div>
         <div class="image__container">
-          <img src="assets/images/Graphic design 03.png" alt="" class="image">
+          <img src="assets/images/Graphic design 03.png" alt="" class="image graphic-design__image--3">
         </div>
         <div class="image__decoration image__decoration--short"></div>
         <div class="image__container">
           <img src="assets/images/Graphic design 04.png" alt="" class="image">
-        </div>
+        </div></div>
         <div class="image__decoration"></div>
         <div class="image__container">
-          <img class="image__icons" src="assets/images/Graphic design 05.png" alt="" class="image">
+          
+          <picture >
+            <source 
+            media="(min-width: 768px)" 
+            srcset="assets/images/Graphic-design-05-PC.png"/>
+            <source 
+            media="(min-width: 360px)" 
+            srcset="assets/images/Graphic-design-05.png"/>
+            <img  class="image__icons" src="assets/images/Graphic design 05.png" alt="ICONOS"/>
+          </picture>
+          
         </div>
       </article>
     </div>
