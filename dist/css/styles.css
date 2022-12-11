@@ -801,6 +801,9 @@ body::after {
     object-fit: cover;
   }
 }
+.image--about-me {
+  border-bottom: 1px solid black;
+}
 @media screen and (min-width: 1024px) {
   .image--border {
     border-bottom: 1px solid black;
@@ -1063,6 +1066,56 @@ body::after {
   }
   .graphic-design__image--3 {
     border-right: 1px solid black;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .grid-ilustration {
+    display: grid;
+    grid-template-columns: 50% 50%;
+    grid-template-rows: auto auto;
+    border-bottom: 1px solid black;
+  }
+  .grid-ilustration__item-2 {
+    display: flex;
+    align-items: center;
+    border-left: 1px solid black;
+  }
+  .grid-ilustration--2 {
+    display: grid;
+    grid-template-columns: 62.8% 37.2%;
+    grid-template-rows: auto auto;
+    border-bottom: 1px solid black;
+  }
+  .grid-ilustration--2__item-2 {
+    display: flex;
+    align-items: center;
+    border-left: 1px solid black;
+  }
+  .grid-ilustration--3 {
+    display: grid;
+    grid-template-columns: 50.3% 49.7%;
+    grid-template-rows: auto auto;
+  }
+  .grid-ilustration--3__item-2 {
+    display: flex;
+    align-items: center;
+    border-left: 1px solid black;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .about-me-grid {
+    display: grid;
+    grid-template-columns: 36% 1fr;
+    grid-template-rows: auto auto;
+    border-bottom: 1px solid black;
+    border-top: 1px solid black;
+  }
+  .about-me-grid__item-2 {
+    display: flex;
+    align-items: center;
+    border-left: 1px solid black;
   }
 }
 
@@ -1545,11 +1598,17 @@ body::after {
   display: inline-block;
   white-space: nowrap;
   /* El ancho del text debe ser igual que la distancia entre sombras */
-  width: 150px;
+  width: 94px;
   animation: move-text 3s linear infinite;
   /* Text shadow funciona igual que box-shadow, pero para texto   */
-  text-shadow: 150px 0, 300px 0, 450px 0, 600px 0, 750px 0, 900px 0, 1050px 0, 1200px 0, 1350px 0, 1500px 0, 1650px 0, 1800px 0, 1950px 0, 2100px 0, 2250px 0, 2400px 0, 2550px 0, 2700px 0, 2850px 0;
+  text-shadow: 94px 0, 188px 0, 282px 0, 376px 0, 470px 0, 564px 0, 658px 0, 752px 0, 846px 0, 940px 0, 1034px 0, 1128px 0, 1222px 0, 1316px 0, 1410px 0, 1504px 0, 1598px 0, 1692px 0, 1786px 0, 1880px 0, 1974px 0, 2068px 0, 2162px 0, 2256px 0, 2350px 0, 2444px 0, 2538px 0, 2632px 0, 2726px 0, 2820px 0, 2914px 0, 3008px 0, 3102px 0, 3196px 0, 3290px 0, 3384px 0, 3478px 0, 3572px 0, 3666px 0, 3760px 0, 3854px 0, 3948px 0, 4042px 0, 4136px 0, 4230px 0, 4324px 0, 4418px 0, 4512px 0, 4606px 0, 4700px 0, 4794px 0, 4888px 0, 4982px 0, 5076px 0, 5170px 0, 5264px 0, 5358px 0, 5452px 0, 5546px 0, 5640px 0, 5734px 0, 5828px 0, 5922px 0, 6016px 0, 6110px 0, 6204px 0, 6298px 0, 6392px 0, 6486px 0, 6580px 0, 6674px 0, 6768px 0, 6862px 0, 6956px 0, 7050px 0, 7144px 0, 7238px 0, 7332px 0, 7426px 0, 7520px 0, 7614px 0, 7708px 0, 7802px 0, 7896px 0, 7990px 0, 8084px 0, 8178px 0, 8272px 0, 8366px 0, 8460px 0, 8554px 0, 8648px 0, 8742px 0, 8836px 0, 8930px 0, 9024px 0, 9118px 0, 9212px 0, 9306px 0;
 }
+@media screen and (min-width: 1024px) {
+  .words {
+    font-size: 1rem;
+  }
+}
+
 @keyframes move-text {
   to {
     transform: translateX(-100%);
