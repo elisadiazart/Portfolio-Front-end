@@ -5,6 +5,10 @@
         @include responsive(laptop){
             margin-left: 447px;
         }
+
+        @include responsive(laptop){
+            margin-left: calc(447px + 106px);
+        }
     
 
     &__space {

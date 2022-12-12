@@ -63,6 +63,7 @@
                 margin-left: .5rem;
                 margin-right: .5rem;
             }
+            
            
         }
     }
@@ -86,7 +87,19 @@
                 position: absolute;
                 background-color: var(--black-color);
                 z-index: 1000;
+
+                @include responsive(laptop){
+                    display: none;
+                }
             }
+        }
+        @include responsive(laptop){
+            display: flex;
+            flex-direction: column;
+            position: static;
+            align-items: center;
+            justify-content: center;
+            margin: 0;
         }
     }
 }

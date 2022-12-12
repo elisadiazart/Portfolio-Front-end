@@ -9,6 +9,7 @@ const rootStyles = document.documentElement.style;
 const bodyContainer = document.getElementById('body-container')
 const NightModeElement = document.getElementById('toggle')
 const NavElement = document.getElementById('nav')
+const NightModeSwitch = document.getElementById('toggle')
 
 
 hamburguerElement.addEventListener('click', () => {
@@ -67,5 +68,10 @@ const observer = new IntersectionObserver(callback, options);
 allElementsIntersection.forEach(article => observer.observe(article));
 
 
-
-console.log('hola')
+NightModeSwitch.addEventListener('click', (event) => {
+  if (body.rootStyles.contains ('--black-color')) {
+    rootStyles.willChange('--black-color', '--white-color')
+  }
+  else {
+  }
+})
