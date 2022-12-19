@@ -46,7 +46,6 @@
 }
 
 .form__input--toggle:checked+.form__option--toggle {
-    background-color: var(--white-color);
     transition-property: background-color;
     transition-duration: .2s;
 }

@@ -77,3 +77,11 @@ body {
         cursor: default;
     }
 }
+
+body.light{
+    --black-color: #EAE1F4;
+    --background-color: black;
+    --white-color: black;
+    --primary-color: black;
+    --degradados-background: none;
+}

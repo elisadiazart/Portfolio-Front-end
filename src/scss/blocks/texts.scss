@@ -7,15 +7,18 @@
     font-weight: 400;
     margin: 0;
     margin-bottom: 10px;
+    color: var(--black-color);
 
     &--m{
         font-size: .8rem;
+        color: var(--black-color);
         @include responsive(tablet){
             font-size: 1.1rem;
         }
     }
 
     &--l {
+        color: var(--black-color);
         font-size: .9rem;
 
         @include responsive(tablet){
@@ -27,6 +30,7 @@
     }
 
     &--s{
+        color: var(--black-color);
         line-height: 1.2rem;
         font-size: .8rem;
         @include responsive(tablet){
@@ -39,6 +43,7 @@
     }
 
     &--xl{
+        color: var(--black-color);
         font-size: 1.6rem;
         @include responsive(tablet){
             font-size: 1.6rem;
@@ -46,6 +51,7 @@
     }
 
     &--extra-bold {
+        color: var(--black-color);
         font-weight: 600;
     }
 

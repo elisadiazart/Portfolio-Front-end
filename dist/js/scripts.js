@@ -68,10 +68,11 @@ const observer = new IntersectionObserver(callback, options);
 allElementsIntersection.forEach(article => observer.observe(article));
 
 
-NightModeSwitch.addEventListener('click', (event) => {
-  if (body.rootStyles.contains ('--black-color')) {
-    rootStyles.willChange('--black-color', '--white-color')
+NightModeSwitch.addEventListener('click', () => {
+  if (document.body.classList.contains ('light')) {
+    document.body.classList.remove('light')
   }
   else {
+    document.body.classList.add('light')
   }
 })

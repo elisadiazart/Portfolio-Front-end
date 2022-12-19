@@ -52,6 +52,9 @@
             top: 0;
             background-color: var(--black-color);
             z-index: 10;
+            @include responsive(laptop){
+                display: none;
+            }
         }
     }
 
@@ -63,7 +66,7 @@
         height: 100%;
         padding-top: 95px;
         padding-bottom: 30px;
-        background-image: var(--degradados-nav);
+        background-image: var(--degradados-background);
         background-repeat: no-repeat;
         background-size: cover;
         position: relative;
